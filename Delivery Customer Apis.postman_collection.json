@@ -1,0 +1,5066 @@
+{
+	"info": {
+		"_postman_id": "f502c359-b01b-497c-9527-fb7cd45565a7",
+		"name": "Delivery Champs Customer Apis",
+		"description": "This collection is only for Delivery Champs customer app.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32937146",
+		"_collection_link": "https://winter-firefly-159391.postman.co/workspace/Team-Workspace~c5602e1c-aa13-43f2-86e5-186510a7a634/collection/32937146-f502c359-b01b-497c-9527-fb7cd45565a7?action=share&source=collection_link&creator=32937146"
+	},
+	"item": [
+		{
+			"name": "default",
+			"item": [
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"warning": "Key contains invalid whitespace characters.",
+								"key": "Accept",
+								"value": "aapplication/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYyYTg3MTA1NjczMTM3YjJhOTM5OGZjODY5ZDRjOWEzYTBkZWU3ZTEyOTM4YTc2YTViOTQ1MzFlYjZlMDAxNWExZDcyMzE1NjQxOWRkODU1In0.eyJhdWQiOiIxIiwianRpIjoiZjJhODcxMDU2NzMxMzdiMmE5Mzk4ZmM4NjlkNGM5YTNhMGRlZTdlMTI5MzhhNzZhNWI5NDUzMWViNmUwMDE1YTFkNzIzMTU2NDE5ZGQ4NTUiLCJpYXQiOjE1NzQzMzc2NzQsIm5iZiI6MTU3NDMzNzY3NCwiZXhwIjoxNjA1OTYwMDc0LCJzdWIiOiI4Iiwic2NvcGVzIjpbXX0.vJivIPgDmohtORVyo5a54NFL-OhC6__Yw3vrCxRZS4zIYIKb5ZRWPVeqygjlcs8buwkSMlwyIlsKf1aiMfN5OFy7m50P0y9wjx_3jhZ6xRHW1zz7mtIOD-27TYTeSen0PMFkIuXBET183YdgQqZbYEqZAE3n6vqOaNBPoTzG5_ewZYBrPhIYMAUjS0cDBPc223ZGg0O0gT_bDj5cpZZCwr3694j3b_Kjo6cxxwziXffyPaUupDUkQZSiH6vVvkrADVam8O7ewd6SJrXFmPkzXchj4eFmZlbvNYGDosP3zhgdh4j1hCwXw1d26PvfGtrRKFeeLhaT17edAcp42rn_ELjPqnAJuamSizlwgMBx3vtgmSnOP_k7emRQYNlaUGsDatWxxKfHsCm4F6AcemIBQh-wXFH3ggmuWIZlQWYA1XjiqZkjq-99qEi64uWc263SxWsS7dJQMbSYwDuAGSDzxDX6Al0utgVrW79GZA1vU7iEdE97UVSrGF8A4m6gXwVV0wSAfjwZdI3183vwZqNyT1Oga8YZH704eAi-ZdsxbQ-0vGx42EehAwSsyB4MOx9xY7J82Hmquy-89tj4OXSs3vQLch83v37vJxfcTGaRHuqkzElNs6enIl3x3ixNA7m6h7i466L-BgliVX4XGoG7TdxkZdA30LorcL2Ijjbe5F0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}users",
+							"host": [
+								"{{url}}users"
+							]
+						},
+						"description": "get users list"
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "Hamid",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Raza",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "mobileNumber",
+									"value": "03003003017",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{DC_LIVE}}register",
+							"host": [
+								"{{DC_LIVE}}register"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "osama",
+									"disabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "khan",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "osama.khan",
+									"disabled": true
+								}
+							]
+						},
+						"description": "register customer"
+					},
+					"response": []
+				},
+				{
+					"name": "user activate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "469276",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}user/activate",
+							"host": [
+								"{{deliverychampslocalcustomer}}user"
+							],
+							"path": [
+								"activate"
+							]
+						},
+						"description": "user activate"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "hamid1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{customer}}login",
+							"host": [
+								"{{customer}}login"
+							]
+						},
+						"description": "user login"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZjYjZjYmZjNTMzNWViN2IwNDI5NTk1NmRjYjNiNzU3OGU0MzYzNzY5ZGFmZTIwODc3ZWJiMjFjNTJlNjNkNWE5ZDkxYmE3ZTY2ZmYxMjBjIn0.eyJhdWQiOiIxIiwianRpIjoiNmNiNmNiZmM1MzM1ZWI3YjA0Mjk1OTU2ZGNiM2I3NTc4ZTQzNjM3NjlkYWZlMjA4NzdlYmIyMWM1MmU2M2Q1YTlkOTFiYTdlNjZmZjEyMGMiLCJpYXQiOjE1Nzc3NzU0MTQsIm5iZiI6MTU3Nzc3NTQxNCwiZXhwIjoxNjA5Mzk3ODE0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.g7CEsnQHTe4W8aqXyZn72TSRZbXIbQepxScuzsf4HSwEpNekbr3eLMOIwL2hn425fwbiSHWmwfoyAl62pfWLJg",
+								"type": "text"
+							},
+							{
+								"key": "Access-Control-Request-Headers",
+								"value": "application/xhtml+xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}logout",
+							"host": [
+								"{{url}}logout"
+							]
+						},
+						"description": "user logout"
+					},
+					"response": []
+				},
+				{
+					"name": "resend account activation code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "77",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}resendcode",
+							"host": [
+								"{{url}}resendcode"
+							]
+						},
+						"description": "resend account activation code"
+					},
+					"response": []
+				},
+				{
+					"name": "forgot password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "wt.hamidraza@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}forgot/password",
+							"host": [
+								"{{deliverychampslocalcustomer}}forgot"
+							],
+							"path": [
+								"password"
+							]
+						},
+						"description": "user forgot password"
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mudasir@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "722544",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}reset",
+							"host": [
+								"{{url}}reset"
+							]
+						},
+						"description": "user reset password"
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI1NmFiNzc4MGM3NmE3NDQwNGFlNWM1MjI2MjJmOWZjODBmOWI4NjY2ZWVlMjMxNTk2Mjg5MDZiZTdjOGYwYWYxNmI0NGU0MWIyNGYwNDY0In0.eyJhdWQiOiIxIiwianRpIjoiYjU2YWI3NzgwYzc2YTc0NDA0YWU1YzUyMjYyMmY5ZmM4MGY5Yjg2NjZlZWUyMzE1OTYyODkwNmJlN2M4ZjBhZjE2YjQ0ZTQxYjI0ZjA0NjQiLCJpYXQiOjE1NzU1MzA0ODMsIm5iZiI6MTU3NTUzMDQ4MywiZXhwIjoxNjA3MTUyODgzLCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.TR-TmSAUTZ2Uc09D3VyV3RAQHOZnXY-T8Bv0kmq_WfxgQ_fZGf_teq6Nh-ewho-Mkkv8IwDzUtSqAQF5FBsOrzO4AUh_6kUQ_f9473kMa1RX2X7XiLU_PLOJeYupLx3GSf4DLp0nyFU444kJ0JWeITLdUZj2cM6_tzrWf_NAoIIxnsLim6oObUVY-WT2i52MO5eoqnbK6fq103MyzZoE39gC3ce_H1Bk5huPbhSMXkyDZdTEr95zqeChPhKDO8AAD1DWbrRrYBMEm4IfhKaplaJMZq2Wwp8X_7NH5VOJJz1VV3CMX8ytIde5UCilnSToIINj7xY2EMTuO2IkUvyjjysbeKHZIEKpi8sV6dfQJ_yTrscKj4coov7aRGEsQ1nwp4pfJBMEmlcYhpeUeS5514UYIJ_ijV5PZH1GXOIriRI_rp-v3BuYDQYQMMSH_j2xc_tEeh-SNqpav3FxPJAtn5ud_xTQboJfUoI6otRhZgBi1lMMghiFl3uCbfO2DQkzu7VAUsNH5SzXSbGMzVh_WECBLt11sA803FGrJ07BtGH_LOuR4vBveGnPED4Nd1hTDEPdzGjO2JKybDwWLQ5RpQ8SphW9godTq0W52IRBmbnFE_5hU7hE8JK6vrRkoVmgFGbYZpvrEAeLgU4jvvJNNPz8bSX1GSVikPEhUs6zcFI",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "old_password",
+									"value": "kingkhan",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}password/change",
+							"host": [
+								"{{url}}password"
+							],
+							"path": [
+								"change"
+							]
+						},
+						"description": "change user password"
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}restaurant/search?address=204+Wapda+Avenue%2C+Block+E1+Block+E+1+Wapda+Town+Phase+1+WAPDA+Town%2C+Lahore%2C+Punjab%2C+Pakistan",
+							"host": [
+								"{{deliverychampslocalcustomer}}restaurant"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "10.22",
+									"disabled": true
+								},
+								{
+									"key": "longitude",
+									"value": "11.22",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "204+Wapda+Avenue%2C+Block+E1+Block+E+1+Wapda+Town+Phase+1+WAPDA+Town%2C+Lahore%2C+Punjab%2C+Pakistan"
+								}
+							]
+						},
+						"description": "restaurant search by code"
+					},
+					"response": []
+				},
+				{
+					"name": "user profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImJiNWUzNjQyODJiNDU0ZmIzMDZhZjhiNWQzZmQ5N2I1NTQ0NzE5OGFkMGJkOGYwNTY2YTk2YTFmMDRmMGRhNzI4MTcwY2FmYjdiMDYxMTQyIn0.eyJhdWQiOiI3IiwianRpIjoiYmI1ZTM2NDI4MmI0NTRmYjMwNmFmOGI1ZDNmZDk3YjU1NDQ3MTk4YWQwYmQ4ZjA1NjZhOTZhMWYwNGYwZGE3MjgxNzBjYWZiN2IwNjExNDIiLCJpYXQiOjE2NDMyNzI2MjksIm5iZiI6MTY0MzI3MjYyOSwiZXhwIjoxNjc0ODA4NjI5LCJzdWIiOiIzMTM2Iiwic2NvcGVzIjpbXX0.dzz9dTMSEKcx-HhpPEaEWkxe4n_L7hOXK8NTNBw8hmopD77ZlNDAFL4jKVssrbjXS4mdREm3vhZ7Z5LtBJUIwlODDOArSjQZ-GztZiU-fVSszMtrKuA3y-KjvjZALOt4UARSOR5xMobVHeHiUuiejpKddfT2vNuC34NXhMycxQpOpPt998Ny-Vfbm7n3tljXuncCyJjLayGF_o0ahmXLJS8ZlU1bk9xsEYLeU83VovV4ByF5KjsL0uC7uMoYrZJ5-7M6_IIzS4a6oTSYCWq3Kpk2BRJPC24M2FpmbU8stCzvSK6B77mDR7F_clL_LDC2LQkJb3sSNPXYmFwrVfBBqh3njw8vxHIF-L-L7ln3B_o-2ytt7KcM72Mwvo7-bPaRQLDOTLFbf4oQjHyaz9sm0EjdfYRFyVVpgG6rryQd1X89tMDzi5v6jhklTNr5LGnlc-4YfS2Qe_Xt-nEGZ_8kkRiUnHGP4lbyRoCeUBLecJz7vViWGKqUOsFy1JeaobENhVBoysU4yKxmZ7dqFV77t8_yiIX5ERxOmK0WXogtI-fcsucfcEqoRhqowjoB0yiw74rOywu_jHBBQFNeF5fVYsuNZ2m90QteLZN49XiQbVd6QCRzwDuGe5Y2edsqLXl2PrWhar1_OmYmHmlXtWg6L2a-96okSalwE1n_LV447pU"
+							}
+						],
+						"url": {
+							"raw": "{{waantechdevelopment}}user/profile",
+							"host": [
+								"{{waantechdevelopment}}user"
+							],
+							"path": [
+								"profile"
+							]
+						},
+						"description": "user profile info"
+					},
+					"response": []
+				},
+				{
+					"name": "venue detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}restaurant/detail?venue_id=147",
+							"host": [
+								"{{deliverychampslocalcustomer}}restaurant"
+							],
+							"path": [
+								"detail"
+							],
+							"query": [
+								{
+									"key": "venue_id",
+									"value": "147"
+								}
+							]
+						},
+						"description": "detail of venue"
+					},
+					"response": []
+				},
+				{
+					"name": "user address",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNjMmVmNDMxNDY2YTg1YWQ3ZjU3NjlkNDNjMDEyMTQ1MTQ0ZDBjYTgxMzY1MzIyMGEwNjgzMzBjYTNhNWU0NzQ3NTVjZGMwMTNhYWI4ZWY4In0.eyJhdWQiOiI3IiwianRpIjoiY2MyZWY0MzE0NjZhODVhZDdmNTc2OWQ0M2MwMTIxNDUxNDRkMGNhODEzNjUzMjIwYTA2ODMzMGNhM2E1ZTQ3NDc1NWNkYzAxM2FhYjhlZjgiLCJpYXQiOjE2NDc5MzMwNzYsIm5iZiI6MTY0NzkzMzA3NiwiZXhwIjoxNjc5NDY5MDc2LCJzdWIiOiI0NjY5Iiwic2NvcGVzIjpbXX0.Qi8gdkFGqhvybF65gUdvdLQ0HeaZAFdr22GchB69ZgLpHqfCLmPrXyv-zWx3fVEjcZtqBzqLGf264LiST5q34QtdQl2umQJQ6vWgwDCmX5F43JgiktxevxhgjNbP_u2HlKKb7BIZ4cVVz3hhgYzxHOAC_5hRfUn0fRPwUEe7H_Q7d1reRiwtTZlSb6h-s4imBnynrSPAulZcCcBOLWVYMYFxlFjlsvPsS6XbGrybm74YaHUq9IOsTM7r5LaMF6cyazbUomjdxwI2qkR7gB7BflEDtVmOJotPKYuUcisfulHHYAE25Xv2d3tnGWgd-R5EENB8uvn-8YHiAGRGH7GpQ8YpOrAvwqzLOceenWZ1Aq0Ua9HZbV7JP27KPjBDXhT4yqJUEoldv3t7ibm0f9KwuRfTFImUeS2sLL19uLtyvWipKl363BS1rnpdyHEq2yR-GJQOsVJvrEbi_iqmWPjOdzSy2eYnNajKWmWyRtphHU-Nd_-j_OBF9N1yzAhciCWxZcZqE6g1LmiY1d2EnDEssfxaxqu5uKH1ljEwtCTfOhkdh-IzutzeoqHJu-_xv-5gnd4mC4KuoIKtURqyOS4QKEQAAiJibRRFjGBfteVO5_6Cc1C8C6-P-T1gPuj5g8twGhbNBvKhEIi3YOgGJY9SGwORMgv3K93S92hPNKk-49Y"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{customer}}user/address?",
+							"host": [
+								"{{customer}}user"
+							],
+							"path": [
+								"address"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								},
+								{
+									"key": "venue_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get User Address"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user address ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg5YjBjNjA0ODIyOWYyYmFiNjk3ZTIzNTVkNDlkZWQ4YzliZTZkMjZmZTg5OTA3MmQ0OTMxYTBhYjAyNDI5M2Q1OTk4YzczNDJjODljODkzIn0.eyJhdWQiOiI1IiwianRpIjoiODliMGM2MDQ4MjI5ZjJiYWI2OTdlMjM1NWQ0OWRlZDhjOWJlNmQyNmZlODk5MDcyZDQ5MzFhMGFiMDI0MjkzZDU5OThjNzM0MmM4OWM4OTMiLCJpYXQiOjE2MDA5MzU0NzcsIm5iZiI6MTYwMDkzNTQ3NywiZXhwIjoxNjMyNDcxNDc3LCJzdWIiOiIyMDgiLCJzY29wZXMiOltdfQ.tic-IJQ73xKcmTPgFIKMKEQofxobmCdwvCfzSBjlwQYmhfb-DwIK8Lj1KhOXmIlgfoewwy-tOJ-PQaqMvc-hqDg26g2WFlLejnTNrsVdPmdDjBsXgWs8mucR3CXdu3mn2eruLIlEc_Dsbg6qxis8zwmWt80bSdZVLkYSmC8TBCbwbIqRfHw2TRJYw_Z9nXWd3QqNVyzxfMJsgnfjzIbGhMiSDryrpXCjdGupA3GdpqMfXCzmHMuXPOrutoHhAINNkefobnQ4XFXJyUFO3zxmD7UEi8LaHZwBLrNmp5jR6NlDjVtMlS_4eBBR9DRzvaQGjaGqHf_-Hp8uOkuaJp4T6A3KrIW8QB13j3sBbdpG8T8UVuiTjMMFJWAvIXoMCCnUnUlAFNRbhudjx4DGMlrhGqVaYPhOaL0f4DC0jFgz38huT2bfSL8N2hI4L8Pkzy5NGR7tqzQToMkm0ORehSGpVXV3QEuBEGUz61PX2rHIZEBgh6IajlPbWEjSyYlZ6C-jqSEA65DPy3Ge6s9X1YZNsu-dqbixbeekY3vSHVa7_rdoK119OUN9M4hyYwCytX77mj8ZtiHiTivxx-v7lnkGBEI_ii8LGxSHzxt-ARg-k8eTmayhvGUwq3fhmcLUqkW8zHNgc5iMndrOYFne6T--lYpD7xdOCqgsvjlkvkh8kZY\"",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://waantechdevelopment.com/api/customer/user/address/delete?id=138",
+							"protocol": "https",
+							"host": [
+								"waantechdevelopment",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"user",
+								"address",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "138"
+								}
+							]
+						},
+						"description": "delete user address"
+					},
+					"response": []
+				},
+				{
+					"name": "customer vouchers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjAyMjk4Njk1MDBhODFjZTA1YTM2ZjI5NzVmMGRhMDhiZThhZTQxYWI4YWE3YzE4NzU2YmVhYWM2N2Q5MzVhNWI4MTU3MmFkMGRjNGNjMmM0In0.eyJhdWQiOiIxMSIsImp0aSI6IjAyMjk4Njk1MDBhODFjZTA1YTM2ZjI5NzVmMGRhMDhiZThhZTQxYWI4YWE3YzE4NzU2YmVhYWM2N2Q5MzVhNWI4MTU3MmFkMGRjNGNjMmM0IiwiaWF0IjoxNjQyMTY0MjUyLCJuYmYiOjE2NDIxNjQyNTIsImV4cCI6MTY3MzcwMDI1Miwic3ViIjoiNTIyIiwic2NvcGVzIjpbXX0.lAJP0W3bOPDG5hxMk5Ntnoi3ulmIezCkMKa8RLvC1CEyyunbZQXryLg8tS0n5hjff9fhfSwLKvQtZjHUN8-CkzbZvZu0kQrn3OfkGC2KOQb9RbifB1HtoRwcQys0eMt_LTL_gEgRMv6Wot9S1rdzSIe7wdoopDNvk826cQV3LbP4AwGoXMKeGQHQ2w1tNyxbNLBvYzxUGifDbVGh78FuhHs8Txqde67Z-oBH24ab847_4J6tG7Ybdf-HLAv8rU1iulEur3o74ELlR0wWmlqxBn_SbsGcUQGdndDlTqV_llmJ3nzL4R8fQp7P-zGuMpHdMW-JHf9yRM6SwBtSHzz3BGL-2v1v8HV_jB7SuM46EEzyUWU5krwopAtKtKLJhOaYCIVBe1GkU2Mtx3S09RRi4LP80vAC39mmxYBwmx9dTwOGMDHef55ZmJ0z7QMwWFFUasICitVeSRFEhnMWrh2x4hgWnhwMCbJbAjMD7GcxlrECQpoNe-6d8F0BlKlQH_LKHbc-HImh1Fz2_ioTWAg74bOHjTG3K2iDhGcbAVEcCeCT_NqfEOgB6rWn3sbn_Mrz5SZxKLKA3W2rOkOCcgS7cirAcRF1fHZXxvr9UXAS1ahvL0bl2_jNtyZZL0wTmUSGaHg8Uixsm8mlvKsOtx96btgFUX_Nx3f5uIHNHrzG0UI"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{bolton_customer}}user/vouchers",
+							"host": [
+								"{{bolton_customer}}user"
+							],
+							"path": [
+								"vouchers"
+							]
+						},
+						"description": "delete user address"
+					},
+					"response": []
+				},
+				{
+					"name": "add user address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU0YmU5ODZlMjk3ZTdmNGIyZGI4MmI5NzE0NmFjM2ZiODdhYjYyNDQzODA5MWQ2MTc3YTE1NWViNTFkNTg5YTczNWI0MDFmMjllOWFjOGQzIn0.eyJhdWQiOiI1IiwianRpIjoiZTRiZTk4NmUyOTdlN2Y0YjJkYjgyYjk3MTQ2YWMzZmI4N2FiNjI0NDM4MDkxZDYxNzdhMTU1ZWI1MWQ1ODlhNzM1YjQwMWYyOWU5YWM4ZDMiLCJpYXQiOjE2MDc5MzAxNTcsIm5iZiI6MTYwNzkzMDE1NywiZXhwIjoxNjM5NDY2MTU2LCJzdWIiOiIyODYiLCJzY29wZXMiOltdfQ.R8Oz7lxVyHHUn661_fBsZjgYCs8QcWj-6B4jwZavsST40zKTVi2sdS--sxcsw_ZoH2ToM9--0SntLehSRefY8ToV2eCaH0iqne3DJhvSm6-TPMAvlNfiwwjPyzm24b3tLwnoukynz6lJPwmWSMM3OhvaHeUI4HDWSg-2BQxnQoFMQex1s5aDwt7mYnelx9H25FUtOi6Bs39Bld1bxX9A2VnrV_FqgRl2TQH3Jry4ao3NaB66Dh5KWxqoshVdbdEpbOH0SQU_UIHtY3kpnLDkfnqKhrIg9c9bym_NqcK1ieAoFvyLTn4vCjEeOcLNb3NoQcDwmII-htygQnnInM0Cca8gz7oqwomDNcANxeZEql4z8rISXgnSksukpuNu_GOlhU2uan7qXrmeey5LlLfyF_Bn6BViedU1KmSRvOg0Mb7VxYjTVB_jltmKjiTMG5EUEKzO0th4QAb_pi3s2mm2b8I4o3oKfcbuL0abH42oCaGzJ9piUGGu1YvNC8peFl_mMqkEUbeZL9IsbUN9PfqcndpekiVQPrJkrpFOn1Ij4Sg7SfvjGKKKZ7v0K_TFDSxQhJrQnBsBaXtTiF9Mrric1JS0iEK6ivCS7XvKsAUSzHoLmANpIGafMmNWT8YxRIvRAjsN0xx7rUuDk8heAqVSPrfB5jukaRfBq57iFhqL5KU"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "address_title",
+									"value": "home 6",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "31.5101892",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "74.3440842",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "My Address",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/address/add",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"address",
+								"add"
+							]
+						},
+						"description": "add user address"
+					},
+					"response": []
+				},
+				{
+					"name": "update user phone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUzNjI5OWI0NzgyYjE3YmQ4Mjk5NDMxM2I2ZWUzN2Q3MWMyNWQyZGNiMDUwMjc4YmJlNTE2MzczYWI4YjY4NjliOTFjMjhmZjFkMDgxNWRkIn0.eyJhdWQiOiIxIiwianRpIjoiNTM2Mjk5YjQ3ODJiMTdiZDgyOTk0MzEzYjZlZTM3ZDcxYzI1ZDJkY2IwNTAyNzhiYmU1MTYzNzNhYjhiNjg2OWI5MWMyOGZmMWQwODE1ZGQiLCJpYXQiOjE1Nzg5MDM0NzMsIm5iZiI6MTU3ODkwMzQ3MywiZXhwIjoxNjEwNTI1ODczLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cKFfVZz03Z9RXWSKjHWt2eTQgFG97j5D-UHg3X1713jjr7VrCUMeSpXcoVdUF4dcoXPPJEDQYQIW6g63d5aWfQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobile_number",
+									"value": "923326119047",
+									"type": "text"
+								},
+								{
+									"key": "customer_id",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/phone/update",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"phone",
+								"update"
+							],
+							"query": [
+								{
+									"key": "mobile_number",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "update user phone number"
+					},
+					"response": []
+				},
+				{
+					"name": "add user phone number",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFlZWQ0MmE5YTk0NjUyZTgyODhmYzE5NDkxNTNjMzExOWQzZTQ5ZmNkY2Y5ODEyYjA5NDJhZjk4YTg0MjYyMTBiYWI0NjBmOWRkNzA0ZmEwIn0.eyJhdWQiOiI3IiwianRpIjoiYWVlZDQyYTlhOTQ2NTJlODI4OGZjMTk0OTE1M2MzMTE5ZDNlNDlmY2RjZjk4MTJiMDk0MmFmOThhODQyNjIxMGJhYjQ2MGY5ZGQ3MDRmYTAiLCJpYXQiOjE2Mjc5ODQwMTcsIm5iZiI6MTYyNzk4NDAxNywiZXhwIjoxNjU5NTIwMDE3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ljD-27Iz5R6HKgw5rLhxMNlgDOKxnSvj-TVy6_Tv4C9H_Fp8TAA-Q7wAi_9voojGcwe--7NjQymgI3-MyNrjMWWOp-57JN6mB0mHAM-q17Oknp6QSzo0rLM9JQAifqzLa2rGrpwRgIzRLJTLM0ZwT4rMeNtwRWpv4LnsfNRIr5hve7B6-vYtGXSDlx2C3IqeMhrpxeMqCfMYAgiq9IN5amCjTcNE56s8XTJzesO-tQH6bnalIU5kuUW4YO-LsEUdqb5ki3YCwRgTxJkr3jdXZABuVQr4Betiw-T_i17AhXcxnR75MV8otZT4XehoRdAPDqEUCTTkN0wv7sxx2868ma04_XFbscUSFXHN1gMxUyx1gYYACDFJTK6KkdnqdMZXPPrrxwIff36TToEhjFVrmNMWtd_DmsaaFVp7UL1Sk_ov_H5DRXehnbrWJxZqHBHwGHw9_47OPU9Pk3GMOJEkVC9NMcmxeQhPwdr8r78t6MKsJ5TkQeBf8AFwUg1vsAz1RyLRTYO2w_IbWOEqKFuMogVqpTw6T28UFEkxjBZljIZzX9ezlhW9ZHfbKq2Gzs3svVdvIimhNXYvImbjsILEz46ghkVb1XAq6fyKEv2wVDcBhuNLF0zJ-exlRgnp0ShDLcOoQ-ukbjuQDeujWw4u17JhC4U_AGrtesP2ir2-asA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobile_number",
+									"value": "03474923922",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}user/add/phone/number",
+							"host": [
+								"{{deliverychampslocalcustomer}}user"
+							],
+							"path": [
+								"add",
+								"phone",
+								"number"
+							],
+							"query": [
+								{
+									"key": "mobile_number",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "update user phone number"
+					},
+					"response": []
+				},
+				{
+					"name": "update user profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk0MTBhYTJjYTcwNDJkYmIwNzVlYjk1YjY5NGQ4NmFlYjFiZGZjNTg3NDMyYWM0ZmNjM2IzODQzYjA1M2Q5NDE3MTkyYjFkN2IwNTk1NWIxIn0.eyJhdWQiOiIzIiwianRpIjoiOTQxMGFhMmNhNzA0MmRiYjA3NWViOTViNjk0ZDg2YWViMWJkZmM1ODc0MzJhYzRmY2MzYjM4NDNiMDUzZDk0MTcxOTJiMWQ3YjA1OTU1YjEiLCJpYXQiOjE1ODcxOTk1NjksIm5iZiI6MTU4NzE5OTU2OSwiZXhwIjoxNjE4NzM1NTY5LCJzdWIiOiI3MyIsInNjb3BlcyI6W119.WfkRVpLZV3XX7T3Ivu4h7RfvEWBUH8Z8VEZoAKHhNvOvzRMge1GeA_O-VQnqGpAIsTUbFVulFi2PpJmWe77zVg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "talha",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "pitafi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/profile/update",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"profile",
+								"update"
+							]
+						},
+						"description": "update user profile"
+					},
+					"response": []
+				},
+				{
+					"name": "popular Restaurants",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{waantechdevelopment}}restaurant/mostpopular?page1",
+							"host": [
+								"{{waantechdevelopment}}restaurant"
+							],
+							"path": [
+								"mostpopular"
+							],
+							"query": [
+								{
+									"key": "page1",
+									"value": null
+								}
+							]
+						},
+						"description": "Most Popular Restaurants"
+					},
+					"response": []
+				},
+				{
+					"name": "cuisines count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}restaurant/cuisines",
+							"host": [
+								"{{deliverychampslocalcustomer}}restaurant"
+							],
+							"path": [
+								"cuisines"
+							]
+						},
+						"description": "cuisines count"
+					},
+					"response": []
+				},
+				{
+					"name": "user order list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwNTJkMjJlODFmMjRkM2ZkNGU4MWU3MTg5ZmNiZjg2YWM5ZDk0N2IxNGQxZWNiMzk2M2NlOTczYjRkNjRmMTMwMjljNDA5YTkwNzNkY2M4In0.eyJhdWQiOiI3IiwianRpIjoiNDA1MmQyMmU4MWYyNGQzZmQ0ZTgxZTcxODlmY2JmODZhYzlkOTQ3YjE0ZDFlY2IzOTYzY2U5NzNiNGQ2NGYxMzAyOWM0MDlhOTA3M2RjYzgiLCJpYXQiOjE2NDM5NTc4NDQsIm5iZiI6MTY0Mzk1Nzg0NCwiZXhwIjoxNjc1NDkzODQ0LCJzdWIiOiIzMTM2Iiwic2NvcGVzIjpbXX0.eXJ5HML_Lgq6fLpUpV0Rhn7UZ7ji8xoW2NtjXeoHpBbjFfa18DUwTV8FtuVD_FXGNB4O0bWMI8zp4STosYyg5bDWja62bMF24qJYu2xrO2sjCK5et1Hqd_ZAOIknCCvHi0VRcc_WimRM9iZYyO1u2aZV1IfzQXdlDyad50Nvg-qfJ7kNDFGoD5ExiKTZqpWz5f4JlkKqCuChyOU13-FHFxr-NWeKTMXUDu4HxAFZmfjmUYXt4YrDWu_YUqSBTgPv9mi522uvD0LJHmMoywAo1SfNDu2ihGLPTEKBtvxYVweIzbaBLDI6-9BXFld361VUrM9aQgpv9v8lZEgGjft91fw6l-QvZMt12DGypB_aiaxsbYR5Dw7MTPxREEEW4VibqYL-2EZjJ9QDuU7xhzgz-xn9b5YfsTuBS9WQoapF_uDtCXRJwPBpI8vWVrACKXXYm8WrcHBMxw6GNErD_oWSd2WpP7vR0LZIsGR54fKBrsgGvxJXbCDTnrV5X57MGB7Iyxb0UnuHLeH4DygE6uaftyPB4zKH-s52e8YRvp9VUpvU-lDTU8AvHo97lDlPAbaeMMKhtTvqxHSDZybniccH9BygC7nZuOWP8oGTgnPTsKzqcqy-MmemtTwy9U6Fz_x6Bp6U28QVcbd8X2hZK6gy0yfUOM69qTIwo-sv3uOY8oo"
+							}
+						],
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}user/orders",
+							"host": [
+								"{{deliverychampslocalcustomer}}user"
+							],
+							"path": [
+								"orders"
+							]
+						},
+						"description": "order list"
+					},
+					"response": []
+				},
+				{
+					"name": "user order detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwNTJkMjJlODFmMjRkM2ZkNGU4MWU3MTg5ZmNiZjg2YWM5ZDk0N2IxNGQxZWNiMzk2M2NlOTczYjRkNjRmMTMwMjljNDA5YTkwNzNkY2M4In0.eyJhdWQiOiI3IiwianRpIjoiNDA1MmQyMmU4MWYyNGQzZmQ0ZTgxZTcxODlmY2JmODZhYzlkOTQ3YjE0ZDFlY2IzOTYzY2U5NzNiNGQ2NGYxMzAyOWM0MDlhOTA3M2RjYzgiLCJpYXQiOjE2NDM5NTc4NDQsIm5iZiI6MTY0Mzk1Nzg0NCwiZXhwIjoxNjc1NDkzODQ0LCJzdWIiOiIzMTM2Iiwic2NvcGVzIjpbXX0.eXJ5HML_Lgq6fLpUpV0Rhn7UZ7ji8xoW2NtjXeoHpBbjFfa18DUwTV8FtuVD_FXGNB4O0bWMI8zp4STosYyg5bDWja62bMF24qJYu2xrO2sjCK5et1Hqd_ZAOIknCCvHi0VRcc_WimRM9iZYyO1u2aZV1IfzQXdlDyad50Nvg-qfJ7kNDFGoD5ExiKTZqpWz5f4JlkKqCuChyOU13-FHFxr-NWeKTMXUDu4HxAFZmfjmUYXt4YrDWu_YUqSBTgPv9mi522uvD0LJHmMoywAo1SfNDu2ihGLPTEKBtvxYVweIzbaBLDI6-9BXFld361VUrM9aQgpv9v8lZEgGjft91fw6l-QvZMt12DGypB_aiaxsbYR5Dw7MTPxREEEW4VibqYL-2EZjJ9QDuU7xhzgz-xn9b5YfsTuBS9WQoapF_uDtCXRJwPBpI8vWVrACKXXYm8WrcHBMxw6GNErD_oWSd2WpP7vR0LZIsGR54fKBrsgGvxJXbCDTnrV5X57MGB7Iyxb0UnuHLeH4DygE6uaftyPB4zKH-s52e8YRvp9VUpvU-lDTU8AvHo97lDlPAbaeMMKhtTvqxHSDZybniccH9BygC7nZuOWP8oGTgnPTsKzqcqy-MmemtTwy9U6Fz_x6Bp6U28QVcbd8X2hZK6gy0yfUOM69qTIwo-sv3uOY8oo"
+							}
+						],
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}user/order/detail?order_id=20293",
+							"host": [
+								"{{deliverychampslocalcustomer}}user"
+							],
+							"path": [
+								"order",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "order_id",
+									"value": "20293"
+								}
+							]
+						},
+						"description": "user order detail"
+					},
+					"response": []
+				},
+				{
+					"name": "create cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg3MTE0OGJhOGQzZmFkNDE0MTA4MWVlZTU1NGRmYjk0NGFjYzRlNzE3MTUwZWJkYzU2NmYzOTdmMjQ3YWU0YWZkMDEyNjc0MzZhNzg3MjE3In0.eyJhdWQiOiI3IiwianRpIjoiODcxMTQ4YmE4ZDNmYWQ0MTQxMDgxZWVlNTU0ZGZiOTQ0YWNjNGU3MTcxNTBlYmRjNTY2ZjM5N2YyNDdhZTRhZmQwMTI2NzQzNmE3ODcyMTciLCJpYXQiOjE2MjkxMTE1MzMsIm5iZiI6MTYyOTExMTUzMywiZXhwIjoxNjYwNjQ3NTMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XhiIY8eXQEpndCx8bE8pQpLwSokk3aE4QL192sYGozlyMpkBVY8LhIrecXrg1a6m0gHSTa4CRbhfCfEO_HlLgc-sIUFaaGDtYsBvgr7syuTm_26md2irIKWRzennKiIEoDzo0PL9hc6Y78DgkF0s-jWx6f-aMD0C6ShZWqIJFkF1-rbE5UZYtEE7cz5uPM5QjBS5oDndc62f3LxkssUk7x-rZihmNkF_TV7JKBRc_MLh8NmlE_4xrY1s4rn856Gm0dXDRwpVwx3nM8oHW3RKWB2w4hEPRWJ3a2oHrDI7xP5Rlnga_rFVfdVQOGJpx38awJLUigNF0zhtMDolVXJ1rxHEZhH3r07u47sNQ-uxKwfGm5ZyWxEwrNc6cq9ew7UOvXCh0WemsbkXyQyHGmVTkJxv-qG-vQpKpu-R1pUBNSAM0fVDeOZCw2lQ0b4tignocFf8MJhbS8QyzsjiVwbseqb5OVqGHzTWhSSyzSFH-2Xbe2KKtqsHsfjvtQbKYjSJfQpqKyJALjXZdGW8_1HbpGilw1Id0jd69crwc8KN0erA8o54Ao-NJiMiE3OEiVTNFjFy90446tDQJVAkJfXb_497imNgWVI9SftGHc-NfrjhU05RPW-JPSzaQf1YOHFUcVuQ-DdQpbUYlvuuXOI85KL7dnSQ1-YDs9goa9peQa0"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "1",
+									"description": "required.id of product or deal",
+									"type": "text"
+								},
+								{
+									"key": "serving_id",
+									"value": "11",
+									"description": "required if type is Product.it is serving size of product",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Product",
+									"description": "it should be Product or Deal",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "addons_product[17]",
+									"value": "43",
+									"description": "optional.17 is addon id and its value is addon product model id.",
+									"type": "text"
+								},
+								{
+									"key": "addons_product[6][]",
+									"value": "14",
+									"description": "optional.6 is addon id and its value is addon product model id.nested array coz addons can be multiple selection(checkboxes)",
+									"type": "text"
+								},
+								{
+									"key": "order_placed_platform",
+									"value": "App",
+									"description": "flag",
+									"type": "text"
+								},
+								{
+									"key": "addons_product[7]",
+									"value": "15",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "rub_id",
+									"value": "2",
+									"description": "optional ,rub choices.send just id",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}cart/add-product",
+							"host": [
+								"{{deliverychampslocalcustomer}}cart"
+							],
+							"path": [
+								"add-product"
+							]
+						},
+						"description": "create cart"
+					},
+					"response": []
+				},
+				{
+					"name": "get cart detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg3MTE0OGJhOGQzZmFkNDE0MTA4MWVlZTU1NGRmYjk0NGFjYzRlNzE3MTUwZWJkYzU2NmYzOTdmMjQ3YWU0YWZkMDEyNjc0MzZhNzg3MjE3In0.eyJhdWQiOiI3IiwianRpIjoiODcxMTQ4YmE4ZDNmYWQ0MTQxMDgxZWVlNTU0ZGZiOTQ0YWNjNGU3MTcxNTBlYmRjNTY2ZjM5N2YyNDdhZTRhZmQwMTI2NzQzNmE3ODcyMTciLCJpYXQiOjE2MjkxMTE1MzMsIm5iZiI6MTYyOTExMTUzMywiZXhwIjoxNjYwNjQ3NTMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XhiIY8eXQEpndCx8bE8pQpLwSokk3aE4QL192sYGozlyMpkBVY8LhIrecXrg1a6m0gHSTa4CRbhfCfEO_HlLgc-sIUFaaGDtYsBvgr7syuTm_26md2irIKWRzennKiIEoDzo0PL9hc6Y78DgkF0s-jWx6f-aMD0C6ShZWqIJFkF1-rbE5UZYtEE7cz5uPM5QjBS5oDndc62f3LxkssUk7x-rZihmNkF_TV7JKBRc_MLh8NmlE_4xrY1s4rn856Gm0dXDRwpVwx3nM8oHW3RKWB2w4hEPRWJ3a2oHrDI7xP5Rlnga_rFVfdVQOGJpx38awJLUigNF0zhtMDolVXJ1rxHEZhH3r07u47sNQ-uxKwfGm5ZyWxEwrNc6cq9ew7UOvXCh0WemsbkXyQyHGmVTkJxv-qG-vQpKpu-R1pUBNSAM0fVDeOZCw2lQ0b4tignocFf8MJhbS8QyzsjiVwbseqb5OVqGHzTWhSSyzSFH-2Xbe2KKtqsHsfjvtQbKYjSJfQpqKyJALjXZdGW8_1HbpGilw1Id0jd69crwc8KN0erA8o54Ao-NJiMiE3OEiVTNFjFy90446tDQJVAkJfXb_497imNgWVI9SftGHc-NfrjhU05RPW-JPSzaQf1YOHFUcVuQ-DdQpbUYlvuuXOI85KL7dnSQ1-YDs9goa9peQa0"
+							}
+						],
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}cart/detail",
+							"host": [
+								"{{deliverychampslocalcustomer}}cart"
+							],
+							"path": [
+								"detail"
+							],
+							"query": [
+								{
+									"key": "cart_id",
+									"value": "82",
+									"disabled": true
+								}
+							]
+						},
+						"description": "get cart detail"
+					},
+					"response": []
+				},
+				{
+					"name": "remove cart products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjhhYTc2Y2M2NzY4NTU2Y2Y2Zjg0Zjk5Nzg5MDcyNTAzZmQ1ZmQyNWVkMzFiYjI1OTQxMGE2ZGMyNjg1ZTJkZWMwYjI3NDM2MDEwNmI4NmM3In0.eyJhdWQiOiI3IiwianRpIjoiOGFhNzZjYzY3Njg1NTZjZjZmODRmOTk3ODkwNzI1MDNmZDVmZDI1ZWQzMWJiMjU5NDEwYTZkYzI2ODVlMmRlYzBiMjc0MzYwMTA2Yjg2YzciLCJpYXQiOjE2MjIwMTQzOTgsIm5iZiI6MTYyMjAxNDM5OCwiZXhwIjoxNjUzNTUwMzk4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.d-HvNA06fPUoDHzXqHwfxvPkfhTyKjJ0_qpmRgRDZrL1499XJM8NyH61UvXEcisTcuV4irz9zen6bph35G-VljF9OS8RNxuvz9SZdETG8puDXNnzA5MlHJnc2ReeMMpZoFf76ug8DwusONdkwxNAkSzxsr0m_Smk3QTXsvXMdwLl0-_csbnhqslbomJy_ioT0zulzWDO5G01rV-q-xsvNd-FENr_Jsm738czCEr4VDhvEo5nPY56ETEHGtmdD0AZB5witmGNn-enxES86u6jLHOFJNMxK7VF9ftQKUMCFNtfauW0mCHZ1dU0GFKTMHg01HcxSYZo3CSWFHI8kISMpXgp6SUvrY10w_oXKQ3XqkNsGHKcMgszYuHnWyHrdjR3Z1sN077HCwo6uH_AsLHpSAH5e3K038qz9OCJESsBDFJjfIjn7IMPvcNAb8ywMjCPPRDO3mbH_07iznddksULTPJX8b9XopMaa4E8grNkhVtamuE0uP72b24Dz7Lmzw5qOOdp3DcBR1zyzQiCJSMtTQ_ruf1-9USxuDOh2NatXgvVg3AYQeFV17bruY41zHqRqowmPJtWm7J_VsmIK0SRs7-nCHkVeHy3Gnoke-niv4wfj3AR3gNG9dcAXK6-sZV7omjo3Up3qAAi3qDgEjxmAhIvENGj2tfBQrYRtV0PKvE"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "1815",
+									"description": "table id.metioned below.",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "CartProduct",
+									"description": "it should be CartProduct or CartDeal.these are models",
+									"type": "text"
+								},
+								{
+									"key": "order_placed_platform",
+									"value": "App",
+									"description": "just a flag.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}cart/remove-product",
+							"host": [
+								"{{deliverychampslocalcustomer}}cart"
+							],
+							"path": [
+								"remove-product"
+							]
+						},
+						"description": "remove cart products"
+					},
+					"response": []
+				},
+				{
+					"name": "order status list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}order/status/list",
+							"host": [
+								"{{url}}order"
+							],
+							"path": [
+								"status",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order_id",
+									"value": "4",
+									"disabled": true
+								}
+							]
+						},
+						"description": "order status list"
+					},
+					"response": []
+				},
+				{
+					"name": "get restaurant feedback list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}restaurant/feedback/list?venue_id=1",
+							"host": [
+								"{{deliverychampslocalcustomer}}restaurant"
+							],
+							"path": [
+								"feedback",
+								"list"
+							],
+							"query": [
+								{
+									"key": "venue_id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "get restaurant feedback list"
+					},
+					"response": []
+				},
+				{
+					"name": "get restaurants list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{waantechdevelopment}}restaurant/list",
+							"host": [
+								"{{waantechdevelopment}}restaurant"
+							],
+							"path": [
+								"list"
+							]
+						},
+						"description": "get restaurants list"
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant product addons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}restaurant/product/addons?item_type=Product&item_id=14&servingsize=2",
+							"host": [
+								"{{url}}restaurant"
+							],
+							"path": [
+								"product",
+								"addons"
+							],
+							"query": [
+								{
+									"key": "venue_id",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "item_type",
+									"value": "Product",
+									"description": "two types Product or Deal."
+								},
+								{
+									"key": "item_id",
+									"value": "14",
+									"description": "id of product or deal"
+								},
+								{
+									"key": "servingsize",
+									"value": "2",
+									"description": "it is selected product serving size.required if u choose Product."
+								}
+							]
+						},
+						"description": "restaurant product addons"
+					},
+					"response": []
+				},
+				{
+					"name": "update product quantity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImUzMTMxZWZhNTlhNDkyY2YzMDZmYjdiY2VjMTc0ZjU1NjQ0ODEwMGQ1YzdhNTM4MDQ3Y2I4NmUxNTdkYWY3OWMzZDZlYWQxMGYxODc3MDI5In0.eyJhdWQiOiIzIiwianRpIjoiZTMxMzFlZmE1OWE0OTJjZjMwNmZiN2JjZWMxNzRmNTU2NDQ4MTAwZDVjN2E1MzgwNDdjYjg2ZTE1N2RhZjc5YzNkNmVhZDEwZjE4NzcwMjkiLCJpYXQiOjE1ODc0OTMyNjUsIm5iZiI6MTU4NzQ5MzI2NSwiZXhwIjoxNjE5MDI5MjY1LCJzdWIiOiI3MSIsInNjb3BlcyI6W119.EiuKv5paxj1rzQK-kLS3y2lsUrFtm2wr9M_NqA3h6jRxURbRokOzWcGotasswVYlVVnozyifBoux7SAe0vi2Bw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "item_id",
+									"value": "92",
+									"description": "cart item id.this id is should be from tables mentioned below.",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "CartProduct",
+									"description": "two typs.it is associated with tables CartProduct and CartDeal.if you are removing product then use CartProduct if Deal then put CartDeal",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_id",
+									"value": "50",
+									"description": "user cart id",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}cart/product/updatequantity",
+							"host": [
+								"{{url}}cart"
+							],
+							"path": [
+								"product",
+								"updatequantity"
+							]
+						},
+						"description": "update product quantity"
+					},
+					"response": []
+				},
+				{
+					"name": "place order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg3MTFiYjQ1ZmRjOTUzMmY2MmY5MTI2ZDVkODcxNDIwZTgyMWMwNTI3NGJkMzhhZjk3OWJlYjk3MjdiZTQ5OWYxMjNhNWUwNjU1MDk0ZWMwIn0.eyJhdWQiOiI3IiwianRpIjoiODcxMWJiNDVmZGM5NTMyZjYyZjkxMjZkNWQ4NzE0MjBlODIxYzA1Mjc0YmQzOGFmOTc5YmViOTcyN2JlNDk5ZjEyM2E1ZTA2NTUwOTRlYzAiLCJpYXQiOjE2MzM2MDE0ODYsIm5iZiI6MTYzMzYwMTQ4NiwiZXhwIjoxNjY1MTM3NDg2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Gf2pNyQERgrR_F606wR0pJwQGm-86I0H6tmL8xJlw8Oe_8FZ0NB-_uxiRZgKBND1FWbu75Y_qEdkao-MIT4hm2ndGuFZsIhdlqoV34OHmRb1B0nUiR-dVrcjLNGZtob9l18X8Klkthwx6B4grCvfTEh4VtREuhYEK_aSvYdImKDcEWxnO0Ba4DbuLbUPDzgwLhnrMnjPDkwjrEUNifqLKYo83XrK8xmnXoa0YGvOTRB8Iv6WP63AhKXyXXhmEmAqz1qqNWGxkX8KeMP3BPtblZAC0Dtbsz9SD8bOZpKAijSH8lozxnGrwhYzI5hJSVrvuCR1oRSUGVVWyKH1IR9NzW0gm0GAra64ufo_8lsBJMABLWFCNwx3JgJIDLPX9rrByIqFfNmUUJ5dW9rt3l-6gj0ETTQ9omVrlWjOWQ3Od7YDk3mmq3sqe_06JCCb1bD2u0YeqSy4XcajtuUhJL9VmFJGGrw5ZCTJibP_c3MyDjpYGF7HmLTEveYpTWZ97-ocF-gA_NpUyMmkXvmR4YoEYhaEBl6wPbgZGGSGn64zW6nfNunMSpF7uGJktQlCFJ7qnlCw_VeItVinFiLQd_hOHJnJC2Dd4K9-2V57HzziLkIJVv7JumJKdF3uInDbT7hIGrxLlni0vrr0kZC5LNDrnq2Xdza2Ey-HmBBX2eMcoqM"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shipping_type_id",
+									"value": "1",
+									"description": "order type id.means delivery,pickup,dinning",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "card",
+									"description": "there are two methods card and cash.",
+									"type": "text"
+								},
+								{
+									"key": "customer_address",
+									"value": "3023",
+									"description": "required_if shipping_type_id ==1,which means delivery. user address id.you can get this from user address api.",
+									"type": "text"
+								},
+								{
+									"key": "customer_order_message",
+									"value": "hi this is from app order first",
+									"description": "any text message.optional",
+									"type": "text"
+								},
+								{
+									"key": "order_placed_platform",
+									"value": "app",
+									"description": "it should be 'app'.it is a flag",
+									"type": "text"
+								},
+								{
+									"key": "venue_slug",
+									"value": "brand-bazar-lahore",
+									"description": "any text.",
+									"type": "text"
+								},
+								{
+									"key": "payment_token",
+									"value": "pm_card_threeDSecureRequired",
+									"description": "it is required if you select payment method card.stripe token.",
+									"type": "text"
+								},
+								{
+									"key": "is_voucher_discount",
+									"value": "0",
+									"description": "is_voucher_discount variable is 1 if code is voucher code is given and verified otherwise it will be 0",
+									"type": "text"
+								},
+								{
+									"key": "voucher_discount_code",
+									"value": "",
+									"description": "Voucher Discount Code is optional ",
+									"type": "text"
+								},
+								{
+									"key": "contact_no_1",
+									"value": "03214526547",
+									"type": "text"
+								},
+								{
+									"key": "contact_no_2",
+									"value": "12345678912",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}user/place-order",
+							"host": [
+								"{{deliverychampslocalcustomer}}user"
+							],
+							"path": [
+								"place-order"
+							]
+						},
+						"description": "place order"
+					},
+					"response": []
+				},
+				{
+					"name": "clear user cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNmNDgyNzZiYjNmMmE4YjZkNmQzYTZjOGQwMTE0MGI5MGJmYjFiZjA2NDA3NTkwNTQ0MDdmNGI1MTc0MjViOTc0NWU5NmFiZTFmYTM1NTM0In0.eyJhdWQiOiI3IiwianRpIjoiM2Y0ODI3NmJiM2YyYThiNmQ2ZDNhNmM4ZDAxMTQwYjkwYmZiMWJmMDY0MDc1OTA1NDQwN2Y0YjUxNzQyNWI5NzQ1ZTk2YWJlMWZhMzU1MzQiLCJpYXQiOjE2MzM1MDg5MTQsIm5iZiI6MTYzMzUwODkxNCwiZXhwIjoxNjY1MDQ0OTE0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Z42k_9ZuWDZYifk0VJShCcA9wrnWQr_GBsRqqyEBgx00om5pC7j2UImEJ-8-ZyGrAf7L6Wtb9E1-UnA-EuUZNxkZXDwFgdi25pNrtyvHnXL2syH7IBeON9oEtM0PZIQR0ULPBLs9H1fDLkZjbf3SVFi8kjk8CDA2GnWl4GzgTiz8kvrcKBUrT_ouV5IgYBVttlCE-RvO9DRq2qBBnO0jym-ntFMJ7QyZU8du0cggFhlQZbk7eJAserUahLVJRrXkrB9v5xTlZCZNDFeDUxkBBotJSHPMh-WZofO57C3tTFWI7ogoL1vYXhX6vpdzJIM5iyIlSd7dAHUNWbYSFpKs0YgtdkvJuNQa8hUqXL6KtLY39PhOpjAvAKDdnaXLacBYw9W_cGZuM2ml-_7HU8fzkmPP6xiFAkXqRt5h45RWv3lVQ4-vGmlQX7JXipZ9AyU39jYwGfjwma8I2lQFKBUkDOfztGrP8QQHEs2UAke8h8S8cxSbmu1xx8uvjYozOibFbqFfJKvi_edphXFRmhm3fPlHsCY69qWkNkUzRL4cGke6cS2gw4U6RF02THVgCrtgVF51-gtOCF6zVwD1fh1Hc28Krt1S-kydCQGb_xNxMcXIh7m-_LrH6657L03bHQOdDoi6ivo6lrRh7S8gZp_GbkZR0tpdsY5Hm6pr18Gdexc",
+								"description": "auth token.user must be login."
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}cart/clear",
+							"host": [
+								"{{deliverychampslocalcustomer}}cart"
+							],
+							"path": [
+								"clear"
+							]
+						},
+						"description": "clear user cart"
+					},
+					"response": []
+				},
+				{
+					"name": "get restaurant order types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}restaurant/order/types?venue_id=1",
+							"host": [
+								"{{url}}restaurant"
+							],
+							"path": [
+								"order",
+								"types"
+							],
+							"query": [
+								{
+									"key": "venue_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Order feedback",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImUzMTMxZWZhNTlhNDkyY2YzMDZmYjdiY2VjMTc0ZjU1NjQ0ODEwMGQ1YzdhNTM4MDQ3Y2I4NmUxNTdkYWY3OWMzZDZlYWQxMGYxODc3MDI5In0.eyJhdWQiOiIzIiwianRpIjoiZTMxMzFlZmE1OWE0OTJjZjMwNmZiN2JjZWMxNzRmNTU2NDQ4MTAwZDVjN2E1MzgwNDdjYjg2ZTE1N2RhZjc5YzNkNmVhZDEwZjE4NzcwMjkiLCJpYXQiOjE1ODc0OTMyNjUsIm5iZiI6MTU4NzQ5MzI2NSwiZXhwIjoxNjE5MDI5MjY1LCJzdWIiOiI3MSIsInNjb3BlcyI6W119.EiuKv5paxj1rzQK-kLS3y2lsUrFtm2wr9M_NqA3h6jRxURbRokOzWcGotasswVYlVVnozyifBoux7SAe0vi2Bw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order_id",
+									"value": "22",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "venue_id",
+									"value": "33",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "quality_food",
+									"value": "",
+									"description": "optional.1 to 5 value.",
+									"type": "text"
+								},
+								{
+									"key": "service_efficiency",
+									"value": "",
+									"description": "optional.1 to 5 value.",
+									"type": "text"
+								},
+								{
+									"key": "value_money",
+									"value": "4",
+									"description": "optional.1 to 5 value.",
+									"type": "text"
+								},
+								{
+									"key": "feedback",
+									"value": "this is texting",
+									"description": "optional.text.max 255 char.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/order/feedback",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"order",
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check restaurant address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "venue_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "address_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "total_amount",
+									"value": "1200",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "31.3202919",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "74.3851379",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}check/restaurant/deliveryaddress",
+							"host": [
+								"{{deliverychampslocalcustomer}}check"
+							],
+							"path": [
+								"restaurant",
+								"deliveryaddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stripe checkout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE0NGJmNjM4YzM5YjRlYTMzZGVhYzBlYmY4OWViN2IzOGMyM2MyYmFiNTU1OWVhYjhmMzA5ZTZhMWVhODA0OTZhYjUzMDkxMjRmYzY1NzEyIn0.eyJhdWQiOiI3IiwianRpIjoiYTQ0YmY2MzhjMzliNGVhMzNkZWFjMGViZjg5ZWI3YjM4YzIzYzJiYWI1NTU5ZWFiOGYzMDllNmExZWE4MDQ5NmFiNTMwOTEyNGZjNjU3MTIiLCJpYXQiOjE2MzQwMjQzMTEsIm5iZiI6MTYzNDAyNDMxMSwiZXhwIjoxNjY1NTYwMzExLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AJs1V6_Se-vVqnSFciJWXJoVnfxz9pn7I7ta5d-OxsmJE_1ZYuY19CD2z4Ob8jPQxrvvKrFOz29zcrpUm5f-GDqK6S-c9KsD2Rl4rQybEuPHu6q7qaqkotdtacRAzCJrcVloam_gbtL4NwNZL0n2ISZMXPsVQjEeVUNJT34ofwOdU1iPtrtjyhTf1OmxYqy4DfV_6Cph6cYc1UOwbdqYOi36qawKNFlTQAuI4Df0lBZ9yH_1ZgWkuAqXRiRz0y4fY9TZgfrHRKySBnJYF17s-WcdNc6QqV8mL5VnfuEVEOimzHgTixqxNAxMjv5Uqopdr7Nt2Z2cl12zrv855FPAbOKVm9hEZOB-pe92UFLyV-abX7JMYntwv-Zkhk_EUoxx1Xz8v35pGlT0V3ZPGd4Tfessj9GZzZJUdjIeSgcffsWG6Z-xH4X7tcRDpimBIzyQ_ifKzrHHTcwNGNOX5yC0vTRf3iBVevZoKx1gmVN5AJsoGAcYxjsI58RUnbrFmhMdOGWuzoppw2j48-SbS7ZwT1MdeIxr6AfuhpYVzZlKftB4i71AcyXC1SCmBza7HB2yMvXWs1ff-5Nll8UgEunL4j2JWxE3WMKm5zVydIRZf-FI55DW_OU08bJYqrJloOM8TTejmgTX1hQEW9sp9bY6iu0zfM6P76vazNNsDMp8ocw"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "is_voucher_discount",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "voucher_discount_code",
+									"value": "ACCD1",
+									"type": "text"
+								},
+								{
+									"key": "customer_address",
+									"value": "3023",
+									"type": "text"
+								},
+								{
+									"key": "shipping_type_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{waantechdevelopment}}stripe/checkout",
+							"host": [
+								"{{waantechdevelopment}}stripe"
+							],
+							"path": [
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stripe transaction fee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNhYWUxMjZjYzY1OGYyMjBiMTA5ZTkyNjZiNzk0NjBiNDA1N2Y2YzExOTMwYjYwYTlmODc2NmFmNzdhZjI2OTczNTNmYjBhMDg2ZjQyYTc1In0.eyJhdWQiOiI3IiwianRpIjoiM2FhZTEyNmNjNjU4ZjIyMGIxMDllOTI2NmI3OTQ2MGI0MDU3ZjZjMTE5MzBiNjBhOWY4NzY2YWY3N2FmMjY5NzM1M2ZiMGEwODZmNDJhNzUiLCJpYXQiOjE2MzM0MTEyNjMsIm5iZiI6MTYzMzQxMTI2MywiZXhwIjoxNjY0OTQ3MjYzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.DaGoDYikvKhE3RJq-WjJu51AJ2Qme5WWWxzNT4bQOWHIPRjAHTJKyapUHqrQN3nTFy4hnyyRgwViSkiYLX769h0iz8ScmDRZvUSakEnzBMn1i80uuAQuWQeZ_Hv3ydx6RaCpdWeNL0lSLteUnyXOigMMovq9EHswNfO15jQ5pTR01L0h1UglDU92GqJ1MCMr1lQAcKya3I7rFgAGCWphoOVnN5_yipq5LIhW964pA3ONmKcWflVZAJJKI_Ffb0dxkZhTM-Txs33Dd_DSCpxNi2vjBDWTn222zDLbR0s4ZTd7mxhAEe5lGF1k_IrTCiq5sKG4q6IP12IaqOXwdGTYVli7Qa4GSFoA_-3FCwLgEg4AjmzZY1OEOSG9UCxRKijZzgsHpjdWx5dBE4NYizr_pHXNrfMTldqVnW9P6IJYRGohD9zyvMfYETPKGuIchKf6avIwO2KyZxLzt6Q_KnMqtjMKOOr_eisA7j-l2Oxif2UWbC8YcT63DLItx_IpVQfcSixGXlOnpcpvibRy25GRNnZeeaRpcI4pZ_XDH6NAwf1hmCro6BaCa0XRQ9QcZhuXVYsCKwkQsFkiqKm9gzAfPPnpmA2YYCc3C5x_oYagmk1CM-jWUPVwkanYT12zuXIjlLEnB9dWMEFLnvnLiATiKV-qw6HAPJ-9nivEkrg06ZE"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "is_voucher_discount",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "voucher_discount_code",
+									"value": "ABCD",
+									"type": "text"
+								},
+								{
+									"key": "customer_address",
+									"value": "3023",
+									"type": "text"
+								},
+								{
+									"key": "shipping_type_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}stripe/transaction/fee",
+							"host": [
+								"{{deliverychampslocalcustomer}}stripe"
+							],
+							"path": [
+								"transaction",
+								"fee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order place new api not in used",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk0ZGNlNTViYjg2YTA0MjM3Yjc2NGRiODVhNDQyOTA4ZWI5MGVhNDZkZjNiNmMwYjRlMmQxNWRkYWY4ODhkMzUyMzIyNGEyOTQ5YzkwY2E2In0.eyJhdWQiOiIzIiwianRpIjoiOTRkY2U1NWJiODZhMDQyMzdiNzY0ZGI4NWE0NDI5MDhlYjkwZWE0NmRmM2I2YzBiNGUyZDE1ZGRhZjg4OGQzNTIzMjI0YTI5NDljOTBjYTYiLCJpYXQiOjE1ODg3NDY0MDcsIm5iZiI6MTU4ODc0NjQwNywiZXhwIjoxNjIwMjgyNDA3LCJzdWIiOiI3MSIsInNjb3BlcyI6W119.AQrqW_nG7LJMVyj3qufRKcryZns3nQgcXlXAKwplXp1sh2MasQNk_4PrNzR04a6HAfXSy7y_m11hNXVwVANoTg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shipping_type_id",
+									"value": "1",
+									"description": "order type id.means delivery,pickup,dinning",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "card",
+									"description": "there are two methods card and cash.",
+									"type": "text"
+								},
+								{
+									"key": "customer_address",
+									"value": "4",
+									"description": "required_if shipping_type_id ==1,which means delivery. user address id.you can get this from user address api.",
+									"type": "text"
+								},
+								{
+									"key": "customer_order_message",
+									"value": "hi this is from app order first",
+									"description": "any text message.optional",
+									"type": "text"
+								},
+								{
+									"key": "order_placed_platform",
+									"value": "app",
+									"description": "it should be 'app'.it is a flag",
+									"type": "text"
+								},
+								{
+									"key": "venue_slug",
+									"value": "kings-queens-pizza-gulberg-barrow-in-furness",
+									"description": "any text.",
+									"type": "text"
+								},
+								{
+									"key": "payment_token",
+									"value": "pm_1Gek78GJCJTQahgcjlbIPtdh",
+									"description": "it is required if you select payment method card.stripe token.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/order-place",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"order-place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify voucher discount code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg1NGVkYmU3OTI0NjBkZjM5NWMyZTkwNjdhYjI1ZjMwNDBhMTUwNzIxZTk2ZGZlYjU1ZmIyODRiYjI2ZjQ0MWQwOWZiNmRkOWYzZDJiNzc4In0.eyJhdWQiOiI3IiwianRpIjoiODU0ZWRiZTc5MjQ2MGRmMzk1YzJlOTA2N2FiMjVmMzA0MGExNTA3MjFlOTZkZmViNTVmYjI4NGJiMjZmNDQxZDA5ZmI2ZGQ5ZjNkMmI3NzgiLCJpYXQiOjE2MjI3OTg0NzYsIm5iZiI6MTYyMjc5ODQ3NiwiZXhwIjoxNjU0MzM0NDc2LCJzdWIiOiI0MDMiLCJzY29wZXMiOltdfQ.ThbYa1bKad1q9hTtx7athb9Z6JD9IOW0rDSCvAESFe7UhOtFn0wdd3Mo3cD1GuV7z7T1RW8lo2JtYORmLJ1unE8ndrnQojUKqHw0JSMqht-IJWDdOAUIn-f1-u-ry9FK3auJ8RBEmlSmFLscar39vOqyn4I97jUFNV3072Rbh9vr-2D0qXqy2Suz-udEqDZqMoNa8uH6VF4h0HSr3EKX5MX8cWeAl3lQqgm0-bpMVr-rO0aA8mZLHwLeGTlKJrvAlHre5nrSQe5FGv4w2oXI5065t725QupCl1uGQpl4CUe5V3T_pXwjfiS2ugNYDm9KAXA_tvvmjsc45qXtVJu5qLr0FpCgkFACO2K7etf10TRK3e93NzWuySAu1eBSEOy7qjQyz7YzLAZHMQAYlrSA15-W1kPgArGFU58UHTX2169-PvuI59EVpG8t3B-QR6IG6oxwCoFyBjCzv9fFBV_S6etDNr9TdWMNEyvT4GK-ZANpqJxXVZ0GxFgldslir2r-NPe4GTm0w5j8gfcXE1kyucYEaTjHn-zH2gFKdDJHKg1-Gu-CBd-2ocZ_QfLXOokXV9tTAWu2eUjHtYBPd0eR4JjvCCMMWmCW1nUj0g_5NZFHERVKgwKEiH2nwiTX0Hj7ALgaXZbvlplIs5uwlIhsECGKBIavzhRVVq7tYXoSkr8"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "venue_slug",
+									"value": "ChohanFishCorner",
+									"type": "text"
+								},
+								{
+									"key": "voucher_code",
+									"value": "4saad3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}cart/verify/voucher/code",
+							"host": [
+								"{{deliverychampslocalcustomer}}cart"
+							],
+							"path": [
+								"verify",
+								"voucher",
+								"code"
+							]
+						},
+						"description": "verify voucher discount code"
+					},
+					"response": []
+				},
+				{
+					"name": "Home Screen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{waantechdevelopment}}home/screen?latitude=31.7047995&longitude=74.02560559999999",
+							"host": [
+								"{{waantechdevelopment}}home"
+							],
+							"path": [
+								"screen"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "31.7047995"
+								},
+								{
+									"key": "longitude",
+									"value": "74.02560559999999"
+								}
+							]
+						},
+						"description": "Home Screen"
+					},
+					"response": []
+				},
+				{
+					"name": "Search Autocomplate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}restaurant/search/autocomplete?page=1&limit=2&keyword=Chohan Fish&address=Jinnah Park,+Sheikhupura,+Pakistan",
+							"host": [
+								"{{deliverychampslocalcustomer}}restaurant"
+							],
+							"path": [
+								"search",
+								"autocomplete"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "keyword",
+									"value": "Chohan Fish"
+								},
+								{
+									"key": "address",
+									"value": "Jinnah Park,+Sheikhupura,+Pakistan"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Social Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "provider",
+									"value": "facebook",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "EAAWgkrqHgt4BAGHsb3VlLq1B3JEn8ZCZCVc6xhQdo9FAbiqrFdveNZC7WtYc7G9RwENNWaZAtnE9gZAW3GfK6jPIeNwBXZCrPaM18ohlRe4LUvJ8deUIpBgKRltcjKMCbIQO3Du1ZC801svvhElksK6ZBR29p8bbpkpeXYSelK7WEOmBSXhO5wkkL7w4Jy5wAJkVPHTYcgvvHH8PJQhZB0SxOjfSIBTPeOIGBzf6fhUC8lQZDZD",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{deliverychampslocalcustomer}}social/login",
+							"host": [
+								"{{deliverychampslocalcustomer}}social"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Social Login enabled/disabled",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{DELIVERYCHAMPS_STAGING_CUSTOMER}}social/login/allowed",
+							"host": [
+								"{{DELIVERYCHAMPS_STAGING_CUSTOMER}}social"
+							],
+							"path": [
+								"login",
+								"allowed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzNmRkZWQyOWQ5YmI4MmI5NjRlNDcxZmRmOTJhNWE0OWQzYzY5Yzc3OWI3NDlkMTQxOWRhNDMwYzM3ZGNkYjEyY2MyYWYxZGU5ZGU5MzNlIiwiaWF0IjoxNzEwMjQzMjUyLjE1NzAyLCJuYmYiOjE3MTAyNDMyNTIuMTU3MDIyLCJleHAiOjE3NDE3NzkyNTIuMTUyNzMyLCJzdWIiOiIxNjkyNiIsInNjb3BlcyI6W119.tC-M9pAfuQahePuV-LKnohUhc5upwsX9xen02ZWC7BW0xsEreTa5lemh5Xrw2UXvGGZrh-zG7iSy8O0HLl0vNEM8Fpi3-fAPoZ3c1KtbV8pcphs11edSsVegApDjpvKGWEtOZGy6SKcIXU1C8MxX9A8DqNETPW97zE82nQJEewaGi6drGSsQB2L0yyJtTXCoMzLuQgKNBhXR7iGfkwew64l8YxhYXyKF5DSIyngmZrUIF-PHJtJvUSG0aqhIQhAoXkd61W3-bxGQNz_8smVSAP1mSQjdb6yyu0R4XBwbgh-NGk_fEHklBB91KrxZYBRi_Oq6BZc7LEMf3_Z2quhqhFjJQFYB-6unrGZOqQ92s2ekLAv_G5mtk73uelZcGgGM-Q5ytcB3XP2Rv2P_aUiQh9SfwAB0pItHLCdMltPi_QOuOsm7sd-JjIK92yZYwYvBBPzxb92I_CBPAWc5J5cSdS_wUkY-wREYqHMaOCUXuG0743NZHiZvnenGLnZjVdqsU_2WU7W7h55N7jKbOT0Rhf3XZeMMWe9Yw7hWqQ_Tjz9wTtgxxvImTcDVQL8cmYeAjVLhvGM4BN9i5UwWQryomijV5e2TAtxk63ZEdKEyALcQImpPYDyDiAleq6clLd1UQB9Ldo8rMRn4RcGAhTQK2FOira-jB-ZK1SimCGB18k8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "aapplication/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYyYTg3MTA1NjczMTM3YjJhOTM5OGZjODY5ZDRjOWEzYTBkZWU3ZTEyOTM4YTc2YTViOTQ1MzFlYjZlMDAxNWExZDcyMzE1NjQxOWRkODU1In0.eyJhdWQiOiIxIiwianRpIjoiZjJhODcxMDU2NzMxMzdiMmE5Mzk4ZmM4NjlkNGM5YTNhMGRlZTdlMTI5MzhhNzZhNWI5NDUzMWViNmUwMDE1YTFkNzIzMTU2NDE5ZGQ4NTUiLCJpYXQiOjE1NzQzMzc2NzQsIm5iZiI6MTU3NDMzNzY3NCwiZXhwIjoxNjA1OTYwMDc0LCJzdWIiOiI4Iiwic2NvcGVzIjpbXX0.vJivIPgDmohtORVyo5a54NFL-OhC6__Yw3vrCxRZS4zIYIKb5ZRWPVeqygjlcs8buwkSMlwyIlsKf1aiMfN5OFy7m50P0y9wjx_3jhZ6xRHW1zz7mtIOD-27TYTeSen0PMFkIuXBET183YdgQqZbYEqZAE3n6vqOaNBPoTzG5_ewZYBrPhIYMAUjS0cDBPc223ZGg0O0gT_bDj5cpZZCwr3694j3b_Kjo6cxxwziXffyPaUupDUkQZSiH6vVvkrADVam8O7ewd6SJrXFmPkzXchj4eFmZlbvNYGDosP3zhgdh4j1hCwXw1d26PvfGtrRKFeeLhaT17edAcp42rn_ELjPqnAJuamSizlwgMBx3vtgmSnOP_k7emRQYNlaUGsDatWxxKfHsCm4F6AcemIBQh-wXFH3ggmuWIZlQWYA1XjiqZkjq-99qEi64uWc263SxWsS7dJQMbSYwDuAGSDzxDX6Al0utgVrW79GZA1vU7iEdE97UVSrGF8A4m6gXwVV0wSAfjwZdI3183vwZqNyT1Oga8YZH704eAi-ZdsxbQ-0vGx42EehAwSsyB4MOx9xY7J82Hmquy-89tj4OXSs3vQLch83v37vJxfcTGaRHuqkzElNs6enIl3x3ixNA7m6h7i466L-BgliVX4XGoG7TdxkZdA30LorcL2Ijjbe5F0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}}users",
+							"host": [
+								"{{dc_costumer}}}users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "get users list"
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.ResponseHeader).to.exist;",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist;",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.exist;",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response message is an empty string\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.ResponseHeader).to.exist.and.to.be.an('object');",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.equal(\"\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Content-Type header is application/json\", function () {",
+									"  pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Validate firstName, lastName, and email in the request\", function () {",
+									"  const requestData = pm.request.url.query;",
+									"  ",
+									"  pm.expect(requestData).to.include(\"firstName=osama\");",
+									"  pm.expect(requestData).to.include(\"lastName=khan\");",
+									"  pm.expect(requestData).to.include(\"email=osama.khan\");",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "testing",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "mobileNumber",
+									"value": "03001234567",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1122334455",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "1122334455",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}register?firstName=test&lastName=001&email=test001@gmail.com&=",
+							"host": [
+								"{{dc_costumer}}register"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "test"
+								},
+								{
+									"key": "lastName",
+									"value": "001"
+								},
+								{
+									"key": "email",
+									"value": "test001@gmail.com"
+								},
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						},
+						"description": "register customer"
+					},
+					"response": []
+				},
+				{
+					"name": "user activate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields - ResponseHeader and data\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.ResponseHeader).to.exist;",
+									"    pm.expect(responseData.data).to.exist;",
+									"});",
+									"",
+									"",
+									"pm.test(\"ResponseHeader contains ResponseCode and ResponseMessage\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.ResponseHeader).to.exist;",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist;",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.exist;",
+									"});",
+									"",
+									"",
+									"pm.test(\"Data is an empty object\", function () {",
+									"  const responseData = pm.response.json();",
+									"  ",
+									"  pm.expect(responseData).to.be.an('object');",
+									"  pm.expect(responseData.data).to.deep.equal({});",
+									"});",
+									"",
+									"",
+									"pm.test(\"Content-Type header is application/json\", function () {",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzY2EwOWJiMGEzYjljNjM4YTNmNGIwZTg4M2I4ZTIzOTU2NTFmYjFmMzBhZTk0ZDI2MWQ3ODEwZWVhMDE2OTdjNDFmY2ZiOThkMDUyNTJlIiwiaWF0IjoxNzA4OTM1MDY4Ljk4MjU4NiwibmJmIjoxNzA4OTM1MDY4Ljk4MjU4OCwiZXhwIjoxNzQwNTU3NDY4Ljk3OTgxOCwic3ViIjoiNjU4NiIsInNjb3BlcyI6W119.rHqUAFcbClV5qmKFT_H3k1CCIfMOYAqqcqRaRSAEmB5c4w16hlItB78tJ97CXak4RVcrAyRbJigq9AKzRBA57sGBNtkbDBhBFcB8XLb-weBDzedVraW20KjcVTTCwXd8fyql1sFXapC8uMlvdIwL_NzkUcD-bj0hcVtW1YF9argbcjBniEn0Ngvhgyg1wASKhY81laWVS0HrOkovjaqMDPh9O99dV_zE3c0H-q_mMEwKQCyNLXQi8XRTw-y0L0d41zq1zRK7QTchyrOZc_RN8mqb_wA6K8NA8tYWGW9Oz5r1J-QB_oxt_hmSSuDUUjoW6avF7TBoqTyNLIXWc_V-8p_lEB8wsEekRvkWlIu8OKueCxF-LdqNJ8hrszwzAJHAkkx4lu-_3h0VjZLNhEotjcgNU-m6Vob-bAtiBG2lZL0XzqGjwDZawPGmDCjNRoW6dZXhmGdphQHy_cE_DbC-fgUk2n6Lh9j37ldM-KAiuEinkkzZWYIX9kWck0HLhg4w-nVkN8VF9hExeO0VKH87Yzy_dvHQIqTj3t4-6m88lB96k5B2HMcAUFYPrx3uXD8P95Lapjzv7J5-_VJPi7BSlF3YPJ99JWSDJZ1lJJ3scbrUEU3Cw3OusbvBGaHojO-4jy6K9Tn7z-T1jvfYp8YAlvyh5C2JDMBG9IiUATgVCGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "469276",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}user/activate",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"activate"
+							]
+						},
+						"description": "user activate"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has the required Content-Type header\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains a ResponseHeader object\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader).to.exist.and.to.be.an('object');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response contains data object\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData.data).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"ResponseHeader's ResponseCode is valid and expected\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData.ResponseHeader).to.exist;\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist;\r",
+									"});\r",
+									"\r",
+									"var template = `\r",
+									"<canvas id=\"myChart\" height=\"75\"></canvas>\r",
+									"\r",
+									"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js\"></script> \r",
+									"\r",
+									"<script>\r",
+									"    var ctx = document.getElementById(\"myChart\");\r",
+									"\r",
+									"    var myChart = new Chart(ctx, {\r",
+									"        type: \"bar\",\r",
+									"        data: {\r",
+									"            labels: [],\r",
+									"            datasets: [{\r",
+									"                data: [],\r",
+									"                \r",
+									"                // Change these colours to customize the chart\r",
+									"                backgroundColor: [\"#003f5c\", \"#58508d\", \"#bc5090\", \"#ff6361\", \"#ffa600\"],\r",
+									"            }]\r",
+									"        },\r",
+									"        options: {\r",
+									"            legend: { display: false },\r",
+									"            title: {\r",
+									"                display: true,\r",
+									"                text: 'Count'\r",
+									"            },\r",
+									"            scales: {\r",
+									"                xAxes: [{\r",
+									"                    display: true,\r",
+									"                    scaleLabel: {\r",
+									"                        display: true,\r",
+									"                        labelString: 'Items'\r",
+									"                    }\r",
+									"                }],\r",
+									"                yAxes: [{\r",
+									"                    display: true,\r",
+									"                    scaleLabel: {\r",
+									"                        display: true,\r",
+									"                        labelString: 'Count'\r",
+									"                    }\r",
+									"                }]\r",
+									"            }\r",
+									"        }\r",
+									"\r",
+									"    });\r",
+									"\r",
+									"    // Access the data passed to pm.visualizer.set() from the JavaScript\r",
+									"    // code of the Visualizer template\r",
+									"    pm.getData(function (err, value) {\r",
+									"        myChart.data.datasets[0].data = value.response.data;\r",
+									"        myChart.data.labels = Object.keys(value.response.data);\r",
+									"        myChart.update();\r",
+									"    });\r",
+									"\r",
+									"</script>`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    var res = pm.response.json();\r",
+									"    \r",
+									"    var visualizerData = {\r",
+									"        \r",
+									"        // Labels take an array of strings\r",
+									"        labels: Object.keys(res.data),\r",
+									"        \r",
+									"        // Data takes an array of numbers\r",
+									"        data: Object.values(res.data)\r",
+									"    };\r",
+									"\r",
+									"    return {response: visualizerData};\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test001@gmail.com\n",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}login",
+							"host": [
+								"{{dc_costumer}}login"
+							]
+						},
+						"description": "user login"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 401\", function () {\r",
+									"  pm.expect(pm.response.code).to.equal(401);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required field 'message'\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.have.property('message');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Message is a non-empty string\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.message).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Message should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validate response message for unauthorized access\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.message).to.include(\"unauthorized\").and.to.include(\"access\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZjYjZjYmZjNTMzNWViN2IwNDI5NTk1NmRjYjNiNzU3OGU0MzYzNzY5ZGFmZTIwODc3ZWJiMjFjNTJlNjNkNWE5ZDkxYmE3ZTY2ZmYxMjBjIn0.eyJhdWQiOiIxIiwianRpIjoiNmNiNmNiZmM1MzM1ZWI3YjA0Mjk1OTU2ZGNiM2I3NTc4ZTQzNjM3NjlkYWZlMjA4NzdlYmIyMWM1MmU2M2Q1YTlkOTFiYTdlNjZmZjEyMGMiLCJpYXQiOjE1Nzc3NzU0MTQsIm5iZiI6MTU3Nzc3NTQxNCwiZXhwIjoxNjA5Mzk3ODE0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.g7CEsnQHTe4W8aqXyZn72TSRZbXIbQepxScuzsf4HSwEpNekbr3eLMOIwL2hn425fwbiSHWmwfoyAl62pfWLJg",
+								"type": "text"
+							},
+							{
+								"key": "Access-Control-Request-Headers",
+								"value": "application/xhtml+xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{dc_costumer}}logout",
+							"host": [
+								"{{dc_costumer}}logout"
+							]
+						},
+						"description": "user logout"
+					},
+					"response": []
+				},
+				{
+					"name": "resend account activation code",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Content-Type is application/json\", function () {",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has a ResponseHeader with ResponseCode and ResponseMessage\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.have.property('ResponseHeader').that.is.an('object');",
+									"    pm.expect(responseData.ResponseHeader).to.have.property('ResponseCode');",
+									"    pm.expect(responseData.ResponseHeader).to.have.property('ResponseMessage');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has a data object\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.data).to.exist.and.to.be.an('object');",
+									"});",
+									"",
+									"",
+									"pm.test(\"ResponseMessage is a non-empty string\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzY2EwOWJiMGEzYjljNjM4YTNmNGIwZTg4M2I4ZTIzOTU2NTFmYjFmMzBhZTk0ZDI2MWQ3ODEwZWVhMDE2OTdjNDFmY2ZiOThkMDUyNTJlIiwiaWF0IjoxNzA4OTM1MDY4Ljk4MjU4NiwibmJmIjoxNzA4OTM1MDY4Ljk4MjU4OCwiZXhwIjoxNzQwNTU3NDY4Ljk3OTgxOCwic3ViIjoiNjU4NiIsInNjb3BlcyI6W119.rHqUAFcbClV5qmKFT_H3k1CCIfMOYAqqcqRaRSAEmB5c4w16hlItB78tJ97CXak4RVcrAyRbJigq9AKzRBA57sGBNtkbDBhBFcB8XLb-weBDzedVraW20KjcVTTCwXd8fyql1sFXapC8uMlvdIwL_NzkUcD-bj0hcVtW1YF9argbcjBniEn0Ngvhgyg1wASKhY81laWVS0HrOkovjaqMDPh9O99dV_zE3c0H-q_mMEwKQCyNLXQi8XRTw-y0L0d41zq1zRK7QTchyrOZc_RN8mqb_wA6K8NA8tYWGW9Oz5r1J-QB_oxt_hmSSuDUUjoW6avF7TBoqTyNLIXWc_V-8p_lEB8wsEekRvkWlIu8OKueCxF-LdqNJ8hrszwzAJHAkkx4lu-_3h0VjZLNhEotjcgNU-m6Vob-bAtiBG2lZL0XzqGjwDZawPGmDCjNRoW6dZXhmGdphQHy_cE_DbC-fgUk2n6Lh9j37ldM-KAiuEinkkzZWYIX9kWck0HLhg4w-nVkN8VF9hExeO0VKH87Yzy_dvHQIqTj3t4-6m88lB96k5B2HMcAUFYPrx3uXD8P95Lapjzv7J5-_VJPi7BSlF3YPJ99JWSDJZ1lJJ3scbrUEU3Cw3OusbvBGaHojO-4jy6K9Tn7z-T1jvfYp8YAlvyh5C2JDMBG9IiUATgVCGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "77",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}resendcode",
+							"host": [
+								"{{dc_costumer}}resendcode"
+							]
+						},
+						"description": "resend account activation code"
+					},
+					"response": []
+				},
+				{
+					"name": "forgot password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.expect(pm.response.code).to.equal(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields - ResponseHeader and data\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.ResponseHeader).to.exist;",
+									"    pm.expect(responseData.data).to.exist;",
+									"});",
+									"",
+									"",
+									"pm.test(\"ResponseHeader contains ResponseCode and ResponseMessage\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.ResponseHeader).to.exist.and.to.be.an('object');",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist;",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.exist;",
+									"});",
+									"",
+									"",
+									"pm.test(\"Data is an empty object\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.data).to.eql({});",
+									"});",
+									"",
+									"",
+									"pm.test(\"Content type is application/json\", function () {",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzY2EwOWJiMGEzYjljNjM4YTNmNGIwZTg4M2I4ZTIzOTU2NTFmYjFmMzBhZTk0ZDI2MWQ3ODEwZWVhMDE2OTdjNDFmY2ZiOThkMDUyNTJlIiwiaWF0IjoxNzA4OTM1MDY4Ljk4MjU4NiwibmJmIjoxNzA4OTM1MDY4Ljk4MjU4OCwiZXhwIjoxNzQwNTU3NDY4Ljk3OTgxOCwic3ViIjoiNjU4NiIsInNjb3BlcyI6W119.rHqUAFcbClV5qmKFT_H3k1CCIfMOYAqqcqRaRSAEmB5c4w16hlItB78tJ97CXak4RVcrAyRbJigq9AKzRBA57sGBNtkbDBhBFcB8XLb-weBDzedVraW20KjcVTTCwXd8fyql1sFXapC8uMlvdIwL_NzkUcD-bj0hcVtW1YF9argbcjBniEn0Ngvhgyg1wASKhY81laWVS0HrOkovjaqMDPh9O99dV_zE3c0H-q_mMEwKQCyNLXQi8XRTw-y0L0d41zq1zRK7QTchyrOZc_RN8mqb_wA6K8NA8tYWGW9Oz5r1J-QB_oxt_hmSSuDUUjoW6avF7TBoqTyNLIXWc_V-8p_lEB8wsEekRvkWlIu8OKueCxF-LdqNJ8hrszwzAJHAkkx4lu-_3h0VjZLNhEotjcgNU-m6Vob-bAtiBG2lZL0XzqGjwDZawPGmDCjNRoW6dZXhmGdphQHy_cE_DbC-fgUk2n6Lh9j37ldM-KAiuEinkkzZWYIX9kWck0HLhg4w-nVkN8VF9hExeO0VKH87Yzy_dvHQIqTj3t4-6m88lB96k5B2HMcAUFYPrx3uXD8P95Lapjzv7J5-_VJPi7BSlF3YPJ99JWSDJZ1lJJ3scbrUEU3Cw3OusbvBGaHojO-4jy6K9Tn7z-T1jvfYp8YAlvyh5C2JDMBG9IiUATgVCGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "wt.hamidraza@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}forgot/password",
+							"host": [
+								"{{dc_costumer}}forgot"
+							],
+							"path": [
+								"password"
+							]
+						},
+						"description": "user forgot password"
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate the structure of ResponseHeader object\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader).to.exist.and.to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist.and.to.be.a('number');\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.exist.and.to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"pm.test('validate data share'), function() {\r",
+									"    const responseData = pm.response.json();\r",
+									"}\r",
+									"\r",
+									"pm.test(\"Data object is present in the response\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.data).to.exist;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"ResponseCode is a non-negative integer\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.ResponseHeader.ResponseCode).to.be.a('number');\r",
+									"  pm.expect(responseData.ResponseHeader.ResponseCode).to.be.at.least(0);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mudasir@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "722544",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}reset",
+							"host": [
+								"{{dc_costumer}}reset"
+							]
+						},
+						"description": "user reset password"
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 401\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(401);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.message).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Message is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.message).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Message should be a non-empty string\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Verify Content-Type is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response message is in the expected format\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.message).to.be.a('string');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI1NmFiNzc4MGM3NmE3NDQwNGFlNWM1MjI2MjJmOWZjODBmOWI4NjY2ZWVlMjMxNTk2Mjg5MDZiZTdjOGYwYWYxNmI0NGU0MWIyNGYwNDY0In0.eyJhdWQiOiIxIiwianRpIjoiYjU2YWI3NzgwYzc2YTc0NDA0YWU1YzUyMjYyMmY5ZmM4MGY5Yjg2NjZlZWUyMzE1OTYyODkwNmJlN2M4ZjBhZjE2YjQ0ZTQxYjI0ZjA0NjQiLCJpYXQiOjE1NzU1MzA0ODMsIm5iZiI6MTU3NTUzMDQ4MywiZXhwIjoxNjA3MTUyODgzLCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.TR-TmSAUTZ2Uc09D3VyV3RAQHOZnXY-T8Bv0kmq_WfxgQ_fZGf_teq6Nh-ewho-Mkkv8IwDzUtSqAQF5FBsOrzO4AUh_6kUQ_f9473kMa1RX2X7XiLU_PLOJeYupLx3GSf4DLp0nyFU444kJ0JWeITLdUZj2cM6_tzrWf_NAoIIxnsLim6oObUVY-WT2i52MO5eoqnbK6fq103MyzZoE39gC3ce_H1Bk5huPbhSMXkyDZdTEr95zqeChPhKDO8AAD1DWbrRrYBMEm4IfhKaplaJMZq2Wwp8X_7NH5VOJJz1VV3CMX8ytIde5UCilnSToIINj7xY2EMTuO2IkUvyjjysbeKHZIEKpi8sV6dfQJ_yTrscKj4coov7aRGEsQ1nwp4pfJBMEmlcYhpeUeS5514UYIJ_ijV5PZH1GXOIriRI_rp-v3BuYDQYQMMSH_j2xc_tEeh-SNqpav3FxPJAtn5ud_xTQboJfUoI6otRhZgBi1lMMghiFl3uCbfO2DQkzu7VAUsNH5SzXSbGMzVh_WECBLt11sA803FGrJ07BtGH_LOuR4vBveGnPED4Nd1hTDEPdzGjO2JKybDwWLQ5RpQ8SphW9godTq0W52IRBmbnFE_5hU7hE8JK6vrRkoVmgFGbYZpvrEAeLgU4jvvJNNPz8bSX1GSVikPEhUs6zcFI",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "old_password",
+									"value": "kingkhan",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}password/change",
+							"host": [
+								"{{dc_costumer}}password"
+							],
+							"path": [
+								"change"
+							]
+						},
+						"description": "change user password"
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data array is present and contains at least one element\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.have.property('data').that.is.an('array').and.not.to.be.empty;\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{dc_costumer}}restaurant/search?address=204+Wapda+Avenue%2C+Block+E1+Block+E+1+Wapda+Town+Phase+1+WAPDA+Town%2C+Lahore%2C+Punjab%2C+Pakistan",
+							"host": [
+								"{{dc_costumer}}restaurant"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "10.22",
+									"disabled": true
+								},
+								{
+									"key": "longitude",
+									"value": "11.22",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "204+Wapda+Avenue%2C+Block+E1+Block+E+1+Wapda+Town+Phase+1+WAPDA+Town%2C+Lahore%2C+Punjab%2C+Pakistan"
+								}
+							]
+						},
+						"description": "restaurant search by code"
+					},
+					"response": []
+				},
+				{
+					"name": "user profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validate the structure of ResponseHeader\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.ResponseHeader).to.exist.and.to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist.and.to.be.a('number');\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.exist.and.to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data object is present in the response\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.have.property('data');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzNmRkZWQyOWQ5YmI4MmI5NjRlNDcxZmRmOTJhNWE0OWQzYzY5Yzc3OWI3NDlkMTQxOWRhNDMwYzM3ZGNkYjEyY2MyYWYxZGU5ZGU5MzNlIiwiaWF0IjoxNzEwMjQzMjUyLjE1NzAyLCJuYmYiOjE3MTAyNDMyNTIuMTU3MDIyLCJleHAiOjE3NDE3NzkyNTIuMTUyNzMyLCJzdWIiOiIxNjkyNiIsInNjb3BlcyI6W119.tC-M9pAfuQahePuV-LKnohUhc5upwsX9xen02ZWC7BW0xsEreTa5lemh5Xrw2UXvGGZrh-zG7iSy8O0HLl0vNEM8Fpi3-fAPoZ3c1KtbV8pcphs11edSsVegApDjpvKGWEtOZGy6SKcIXU1C8MxX9A8DqNETPW97zE82nQJEewaGi6drGSsQB2L0yyJtTXCoMzLuQgKNBhXR7iGfkwew64l8YxhYXyKF5DSIyngmZrUIF-PHJtJvUSG0aqhIQhAoXkd61W3-bxGQNz_8smVSAP1mSQjdb6yyu0R4XBwbgh-NGk_fEHklBB91KrxZYBRi_Oq6BZc7LEMf3_Z2quhqhFjJQFYB-6unrGZOqQ92s2ekLAv_G5mtk73uelZcGgGM-Q5ytcB3XP2Rv2P_aUiQh9SfwAB0pItHLCdMltPi_QOuOsm7sd-JjIK92yZYwYvBBPzxb92I_CBPAWc5J5cSdS_wUkY-wREYqHMaOCUXuG0743NZHiZvnenGLnZjVdqsU_2WU7W7h55N7jKbOT0Rhf3XZeMMWe9Yw7hWqQ_Tjz9wTtgxxvImTcDVQL8cmYeAjVLhvGM4BN9i5UwWQryomijV5e2TAtxk63ZEdKEyALcQImpPYDyDiAleq6clLd1UQB9Ldo8rMRn4RcGAhTQK2FOira-jB-ZK1SimCGB18k8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImJiNWUzNjQyODJiNDU0ZmIzMDZhZjhiNWQzZmQ5N2I1NTQ0NzE5OGFkMGJkOGYwNTY2YTk2YTFmMDRmMGRhNzI4MTcwY2FmYjdiMDYxMTQyIn0.eyJhdWQiOiI3IiwianRpIjoiYmI1ZTM2NDI4MmI0NTRmYjMwNmFmOGI1ZDNmZDk3YjU1NDQ3MTk4YWQwYmQ4ZjA1NjZhOTZhMWYwNGYwZGE3MjgxNzBjYWZiN2IwNjExNDIiLCJpYXQiOjE2NDMyNzI2MjksIm5iZiI6MTY0MzI3MjYyOSwiZXhwIjoxNjc0ODA4NjI5LCJzdWIiOiIzMTM2Iiwic2NvcGVzIjpbXX0.dzz9dTMSEKcx-HhpPEaEWkxe4n_L7hOXK8NTNBw8hmopD77ZlNDAFL4jKVssrbjXS4mdREm3vhZ7Z5LtBJUIwlODDOArSjQZ-GztZiU-fVSszMtrKuA3y-KjvjZALOt4UARSOR5xMobVHeHiUuiejpKddfT2vNuC34NXhMycxQpOpPt998Ny-Vfbm7n3tljXuncCyJjLayGF_o0ahmXLJS8ZlU1bk9xsEYLeU83VovV4ByF5KjsL0uC7uMoYrZJ5-7M6_IIzS4a6oTSYCWq3Kpk2BRJPC24M2FpmbU8stCzvSK6B77mDR7F_clL_LDC2LQkJb3sSNPXYmFwrVfBBqh3njw8vxHIF-L-L7ln3B_o-2ytt7KcM72Mwvo7-bPaRQLDOTLFbf4oQjHyaz9sm0EjdfYRFyVVpgG6rryQd1X89tMDzi5v6jhklTNr5LGnlc-4YfS2Qe_Xt-nEGZ_8kkRiUnHGP4lbyRoCeUBLecJz7vViWGKqUOsFy1JeaobENhVBoysU4yKxmZ7dqFV77t8_yiIX5ERxOmK0WXogtI-fcsucfcEqoRhqowjoB0yiw74rOywu_jHBBQFNeF5fVYsuNZ2m90QteLZN49XiQbVd6QCRzwDuGe5Y2edsqLXl2PrWhar1_OmYmHmlXtWg6L2a-96okSalwE1n_LV447pU"
+							}
+						],
+						"url": {
+							"raw": "{{dc_costumer}}user/profile",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"profile"
+							]
+						},
+						"description": "user profile info"
+					},
+					"response": []
+				},
+				{
+					"name": "venue detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dc_costumer}}restaurant/detail?venue_id=147",
+							"host": [
+								"{{dc_costumer}}restaurant"
+							],
+							"path": [
+								"detail"
+							],
+							"query": [
+								{
+									"key": "venue_id",
+									"value": "147"
+								}
+							]
+						},
+						"description": "detail of venue"
+					},
+					"response": []
+				},
+				{
+					"name": "Item Details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the expected Content-Type header\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response body includes non-empty ResponseHeader with ResponseCode and ResponseMessage\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader).to.exist.and.to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist.and.to.be.a('number');\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.exist.and.to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data object is present in the response\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.data).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data object should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.data).to.not.be.empty;\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dc_costumer}}restaurant/item/details?type=deal&item_id=2285",
+							"host": [
+								"{{dc_costumer}}restaurant"
+							],
+							"path": [
+								"item",
+								"details"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "deal"
+								},
+								{
+									"key": "item_id",
+									"value": "2285"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user address",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjYzOTJiMTU5YzJlY2JjYzI5YTBkZjY0MGNmNjViZDc1ZDA2YThhMWY3Y2M0ZmMwNjFhZTk4NDk4ZWRhYWM1NGFkNjA4ZjlmZDdiODk1Zjc1In0.eyJhdWQiOiI3IiwianRpIjoiNjM5MmIxNTljMmVjYmNjMjlhMGRmNjQwY2Y2NWJkNzVkMDZhOGExZjdjYzRmYzA2MWFlOTg0OThlZGFhYzU0YWQ2MDhmOWZkN2I4OTVmNzUiLCJpYXQiOjE2MjI3MTc1MjcsIm5iZiI6MTYyMjcxNzUyNywiZXhwIjoxNjU0MjUzNTI3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.lIRigmgHqpJV5WeflrgJhczbleoA4YjU_lcI_VqFMOZaPc4aSy3HnT126uvXS5n-kBytVEV3_URg2RhVGrJjGhwn-HlYmtHn4UaDw0-XBdjpvFNOaRm9BbHUHjDVd5yhU7_uEqI2KQHazGd9SazFkTpDXeGdzPJovFva0anREsFdbPx2LAuLZn8JQvvAIOwlGyMu8k-lpY_VukFy-9WOijepD9cG1IG9Z7pdC6YFtwgyEKlnGVHSIDvF6X3kR35_T8BAhDUyRDozE2xDLSSI7zZTo2tuRKBHYy_EnlF4UZDAgOlTX7t2s_Tza0_Ev5iaNM-Qksa5kfhSWHCQJER4K6o14_M_vbN_H3zFBQneUVCO32FMbTPrPkDQMkIY6vprTFIV6WaVgtw6fX1vfIjZqJGo4CH2o_8vpu8rZ6Yp_En187U6FYWwV5zJYfOjl-_cwLkKftUoUo4iB-GDp-x9r-9b7_nOZ9iz--wFfU6sLixtVM0oOkjnKaj5QsgwHnrJvpKdlSKjmUy_QEoAxnu9qVwaOOmme_odzExg0iB0D9sqXi8mEHjnxOqx-TpFzLuuOjHhUCRxDVMpAgMquhBL6aIID4js5b4n5Tozx3V1lB_dJ-HNfSx_0N0qX-s6699E-SfsMwLEPnh3VrbTSpMrC1zBcgu31FsZUYcUKxSbT5s"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{dc_costumer}}user/address",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"address"
+							],
+							"query": [
+								{
+									"key": "venue_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get User Address"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 404\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(404);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Message is a non-empty string\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"\r",
+									"  pm.expect(responseData.message).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Message should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Exception is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.exception).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Exception should be a non-empty string\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Trace array is present and contains the expected number of elements\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData.trace).to.be.an('array').and.to.have.lengthOf.at.least(1);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjczODM1ZTczZjY3ZDZjMmFiOWE1OGRlNjc2YTI3NmJkMGVkNTIyM2M2MzE1YzQ4ZmMwNzMzYzFmZWUzNjNjZjI4ZWQ0MjU0ZjVkMTA2YTliIiwiaWF0IjoxNzA4MzM1MjE5LjAyMTQ2LCJuYmYiOjE3MDgzMzUyMTkuMDIxNDYzLCJleHAiOjE3Mzk5NTc2MTkuMDE1NTA1LCJzdWIiOiI2NTg2Iiwic2NvcGVzIjpbXX0.PEq5feI5aq16_mIJ6lPNa0R3Ahq_URf_cCYWMb9Aw8jxVJiCER854M0uaZE6rHN-Trd3PD4o5mCwXmE6dHBxdVe8o2m-vYrq3E8PXewGx-Y-R5zZUaATeXxLEqQFHe89FxFxchDg3DlqMXxMPeYsyXp7sKUTSG2UzpgZ4cVpAgFsN84KepMvJv66KU_JVldSZMK6Jth6VLtewc1LIX2vTIvWTH8JBOzMMrhr6VovFI4c-9hNJorBXAedSlGHxwKGCzuEaIdRUMRWVN_FAKYhZL5ycmgSCYD1iEZQ0rSFfX2c8jFxM8sRPmPa3VOo6qV1HejlgbXUx-U5cbLMbavVpCK5EkgUwbHv_HpFXwIVv5xBVj4ImE44ZKtBPdWiBNTHHF3COo2WwJ3nuRGREVrw5AKsWVnelGgJ10OmxN-q01gr_CEI1QLvR5akafz0I6KncPxIsZYffx6KaXI5an6Ad-O6T-FZErNLqNlp1nFCxuZuHNofdDFJe-l8P-lje5OiWlb7Kt0_Qf8tX-zuJOdXe8keK2m77DVaO2exoQGx2nNVH3pWL3gVWjqJ-HEVMx-oQEWPdN4vX2GnFWAdbVNQ6fry6R-UjI3D803XBEFbQMXgvwDb92Ti8oX2E_tctjS2n68ZHBV9UjNLFjdzlUVuXUg4LkNK3Tply5GlrxcwUh0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg5YjBjNjA0ODIyOWYyYmFiNjk3ZTIzNTVkNDlkZWQ4YzliZTZkMjZmZTg5OTA3MmQ0OTMxYTBhYjAyNDI5M2Q1OTk4YzczNDJjODljODkzIn0.eyJhdWQiOiI1IiwianRpIjoiODliMGM2MDQ4MjI5ZjJiYWI2OTdlMjM1NWQ0OWRlZDhjOWJlNmQyNmZlODk5MDcyZDQ5MzFhMGFiMDI0MjkzZDU5OThjNzM0MmM4OWM4OTMiLCJpYXQiOjE2MDA5MzU0NzcsIm5iZiI6MTYwMDkzNTQ3NywiZXhwIjoxNjMyNDcxNDc3LCJzdWIiOiIyMDgiLCJzY29wZXMiOltdfQ.tic-IJQ73xKcmTPgFIKMKEQofxobmCdwvCfzSBjlwQYmhfb-DwIK8Lj1KhOXmIlgfoewwy-tOJ-PQaqMvc-hqDg26g2WFlLejnTNrsVdPmdDjBsXgWs8mucR3CXdu3mn2eruLIlEc_Dsbg6qxis8zwmWt80bSdZVLkYSmC8TBCbwbIqRfHw2TRJYw_Z9nXWd3QqNVyzxfMJsgnfjzIbGhMiSDryrpXCjdGupA3GdpqMfXCzmHMuXPOrutoHhAINNkefobnQ4XFXJyUFO3zxmD7UEi8LaHZwBLrNmp5jR6NlDjVtMlS_4eBBR9DRzvaQGjaGqHf_-Hp8uOkuaJp4T6A3KrIW8QB13j3sBbdpG8T8UVuiTjMMFJWAvIXoMCCnUnUlAFNRbhudjx4DGMlrhGqVaYPhOaL0f4DC0jFgz38huT2bfSL8N2hI4L8Pkzy5NGR7tqzQToMkm0ORehSGpVXV3QEuBEGUz61PX2rHIZEBgh6IajlPbWEjSyYlZ6C-jqSEA65DPy3Ge6s9X1YZNsu-dqbixbeekY3vSHVa7_rdoK119OUN9M4hyYwCytX77mj8ZtiHiTivxx-v7lnkGBEI_ii8LGxSHzxt-ARg-k8eTmayhvGUwq3fhmcLUqkW8zHNgc5iMndrOYFne6T--lYpD7xdOCqgsvjlkvkh8kZY\"",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{dc_costumer}}delete user address",
+							"host": [
+								"{{dc_costumer}}delete user address"
+							]
+						},
+						"description": "delete user address"
+					},
+					"response": []
+				},
+				{
+					"name": "customer vouchers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjAyMjk4Njk1MDBhODFjZTA1YTM2ZjI5NzVmMGRhMDhiZThhZTQxYWI4YWE3YzE4NzU2YmVhYWM2N2Q5MzVhNWI4MTU3MmFkMGRjNGNjMmM0In0.eyJhdWQiOiIxMSIsImp0aSI6IjAyMjk4Njk1MDBhODFjZTA1YTM2ZjI5NzVmMGRhMDhiZThhZTQxYWI4YWE3YzE4NzU2YmVhYWM2N2Q5MzVhNWI4MTU3MmFkMGRjNGNjMmM0IiwiaWF0IjoxNjQyMTY0MjUyLCJuYmYiOjE2NDIxNjQyNTIsImV4cCI6MTY3MzcwMDI1Miwic3ViIjoiNTIyIiwic2NvcGVzIjpbXX0.lAJP0W3bOPDG5hxMk5Ntnoi3ulmIezCkMKa8RLvC1CEyyunbZQXryLg8tS0n5hjff9fhfSwLKvQtZjHUN8-CkzbZvZu0kQrn3OfkGC2KOQb9RbifB1HtoRwcQys0eMt_LTL_gEgRMv6Wot9S1rdzSIe7wdoopDNvk826cQV3LbP4AwGoXMKeGQHQ2w1tNyxbNLBvYzxUGifDbVGh78FuhHs8Txqde67Z-oBH24ab847_4J6tG7Ybdf-HLAv8rU1iulEur3o74ELlR0wWmlqxBn_SbsGcUQGdndDlTqV_llmJ3nzL4R8fQp7P-zGuMpHdMW-JHf9yRM6SwBtSHzz3BGL-2v1v8HV_jB7SuM46EEzyUWU5krwopAtKtKLJhOaYCIVBe1GkU2Mtx3S09RRi4LP80vAC39mmxYBwmx9dTwOGMDHef55ZmJ0z7QMwWFFUasICitVeSRFEhnMWrh2x4hgWnhwMCbJbAjMD7GcxlrECQpoNe-6d8F0BlKlQH_LKHbc-HImh1Fz2_ioTWAg74bOHjTG3K2iDhGcbAVEcCeCT_NqfEOgB6rWn3sbn_Mrz5SZxKLKA3W2rOkOCcgS7cirAcRF1fHZXxvr9UXAS1ahvL0bl2_jNtyZZL0wTmUSGaHg8Uixsm8mlvKsOtx96btgFUX_Nx3f5uIHNHrzG0UI"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{dc_costumer}}user/vouchers",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"vouchers"
+							]
+						},
+						"description": "delete user address"
+					},
+					"response": []
+				},
+				{
+					"name": "add user address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required fields - ResponseHeader, ResponseCode, and ResponseMessage\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader).to.exist;\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist;\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"ResponseMessage is a non-empty string\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.ResponseHeader.ResponseMessage).to.be.a('string').and.to.have.lengthOf.at.least(1, \"ResponseMessage should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"ResponseCode is a non-negative integer\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.ResponseHeader).to.exist;\r",
+									"  pm.expect(responseData.ResponseHeader.ResponseCode).to.be.a('number').and.to.satisfy((num) => num >= 0, \"ResponseCode should be a non-negative integer\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzY2EwOWJiMGEzYjljNjM4YTNmNGIwZTg4M2I4ZTIzOTU2NTFmYjFmMzBhZTk0ZDI2MWQ3ODEwZWVhMDE2OTdjNDFmY2ZiOThkMDUyNTJlIiwiaWF0IjoxNzA4OTM1MDY4Ljk4MjU4NiwibmJmIjoxNzA4OTM1MDY4Ljk4MjU4OCwiZXhwIjoxNzQwNTU3NDY4Ljk3OTgxOCwic3ViIjoiNjU4NiIsInNjb3BlcyI6W119.rHqUAFcbClV5qmKFT_H3k1CCIfMOYAqqcqRaRSAEmB5c4w16hlItB78tJ97CXak4RVcrAyRbJigq9AKzRBA57sGBNtkbDBhBFcB8XLb-weBDzedVraW20KjcVTTCwXd8fyql1sFXapC8uMlvdIwL_NzkUcD-bj0hcVtW1YF9argbcjBniEn0Ngvhgyg1wASKhY81laWVS0HrOkovjaqMDPh9O99dV_zE3c0H-q_mMEwKQCyNLXQi8XRTw-y0L0d41zq1zRK7QTchyrOZc_RN8mqb_wA6K8NA8tYWGW9Oz5r1J-QB_oxt_hmSSuDUUjoW6avF7TBoqTyNLIXWc_V-8p_lEB8wsEekRvkWlIu8OKueCxF-LdqNJ8hrszwzAJHAkkx4lu-_3h0VjZLNhEotjcgNU-m6Vob-bAtiBG2lZL0XzqGjwDZawPGmDCjNRoW6dZXhmGdphQHy_cE_DbC-fgUk2n6Lh9j37ldM-KAiuEinkkzZWYIX9kWck0HLhg4w-nVkN8VF9hExeO0VKH87Yzy_dvHQIqTj3t4-6m88lB96k5B2HMcAUFYPrx3uXD8P95Lapjzv7J5-_VJPi7BSlF3YPJ99JWSDJZ1lJJ3scbrUEU3Cw3OusbvBGaHojO-4jy6K9Tn7z-T1jvfYp8YAlvyh5C2JDMBG9IiUATgVCGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU0YmU5ODZlMjk3ZTdmNGIyZGI4MmI5NzE0NmFjM2ZiODdhYjYyNDQzODA5MWQ2MTc3YTE1NWViNTFkNTg5YTczNWI0MDFmMjllOWFjOGQzIn0.eyJhdWQiOiI1IiwianRpIjoiZTRiZTk4NmUyOTdlN2Y0YjJkYjgyYjk3MTQ2YWMzZmI4N2FiNjI0NDM4MDkxZDYxNzdhMTU1ZWI1MWQ1ODlhNzM1YjQwMWYyOWU5YWM4ZDMiLCJpYXQiOjE2MDc5MzAxNTcsIm5iZiI6MTYwNzkzMDE1NywiZXhwIjoxNjM5NDY2MTU2LCJzdWIiOiIyODYiLCJzY29wZXMiOltdfQ.R8Oz7lxVyHHUn661_fBsZjgYCs8QcWj-6B4jwZavsST40zKTVi2sdS--sxcsw_ZoH2ToM9--0SntLehSRefY8ToV2eCaH0iqne3DJhvSm6-TPMAvlNfiwwjPyzm24b3tLwnoukynz6lJPwmWSMM3OhvaHeUI4HDWSg-2BQxnQoFMQex1s5aDwt7mYnelx9H25FUtOi6Bs39Bld1bxX9A2VnrV_FqgRl2TQH3Jry4ao3NaB66Dh5KWxqoshVdbdEpbOH0SQU_UIHtY3kpnLDkfnqKhrIg9c9bym_NqcK1ieAoFvyLTn4vCjEeOcLNb3NoQcDwmII-htygQnnInM0Cca8gz7oqwomDNcANxeZEql4z8rISXgnSksukpuNu_GOlhU2uan7qXrmeey5LlLfyF_Bn6BViedU1KmSRvOg0Mb7VxYjTVB_jltmKjiTMG5EUEKzO0th4QAb_pi3s2mm2b8I4o3oKfcbuL0abH42oCaGzJ9piUGGu1YvNC8peFl_mMqkEUbeZL9IsbUN9PfqcndpekiVQPrJkrpFOn1Ij4Sg7SfvjGKKKZ7v0K_TFDSxQhJrQnBsBaXtTiF9Mrric1JS0iEK6ivCS7XvKsAUSzHoLmANpIGafMmNWT8YxRIvRAjsN0xx7rUuDk8heAqVSPrfB5jukaRfBq57iFhqL5KU"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "address_title",
+									"value": "home 6",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "31.5101892",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "74.3440842",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "My Address",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}user/address/add",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"address",
+								"add"
+							]
+						},
+						"description": "add user address"
+					},
+					"response": []
+				},
+				{
+					"name": "update user phone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUzNjI5OWI0NzgyYjE3YmQ4Mjk5NDMxM2I2ZWUzN2Q3MWMyNWQyZGNiMDUwMjc4YmJlNTE2MzczYWI4YjY4NjliOTFjMjhmZjFkMDgxNWRkIn0.eyJhdWQiOiIxIiwianRpIjoiNTM2Mjk5YjQ3ODJiMTdiZDgyOTk0MzEzYjZlZTM3ZDcxYzI1ZDJkY2IwNTAyNzhiYmU1MTYzNzNhYjhiNjg2OWI5MWMyOGZmMWQwODE1ZGQiLCJpYXQiOjE1Nzg5MDM0NzMsIm5iZiI6MTU3ODkwMzQ3MywiZXhwIjoxNjEwNTI1ODczLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cKFfVZz03Z9RXWSKjHWt2eTQgFG97j5D-UHg3X1713jjr7VrCUMeSpXcoVdUF4dcoXPPJEDQYQIW6g63d5aWfQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobile_number",
+									"value": "923326119047",
+									"type": "text"
+								},
+								{
+									"key": "customer_id",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}user/phone/update",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"phone",
+								"update"
+							],
+							"query": [
+								{
+									"key": "mobile_number",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "update user phone number"
+					},
+					"response": []
+				},
+				{
+					"name": "add user phone number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required fields - ResponseHeader, ResponseCode, and ResponseMessage\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader).to.exist;\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist;\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the correct Content-Type header - application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"ResponseCode is a non-negative integer\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.ResponseHeader).to.exist;\r",
+									"  pm.expect(responseData.ResponseHeader.ResponseCode).to.be.a('number').and.to.satisfy((code) => code >= 0);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"ResponseMessage is a non-empty string\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"\r",
+									"  pm.expect(responseData.ResponseHeader.ResponseMessage).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzY2EwOWJiMGEzYjljNjM4YTNmNGIwZTg4M2I4ZTIzOTU2NTFmYjFmMzBhZTk0ZDI2MWQ3ODEwZWVhMDE2OTdjNDFmY2ZiOThkMDUyNTJlIiwiaWF0IjoxNzA4OTM1MDY4Ljk4MjU4NiwibmJmIjoxNzA4OTM1MDY4Ljk4MjU4OCwiZXhwIjoxNzQwNTU3NDY4Ljk3OTgxOCwic3ViIjoiNjU4NiIsInNjb3BlcyI6W119.rHqUAFcbClV5qmKFT_H3k1CCIfMOYAqqcqRaRSAEmB5c4w16hlItB78tJ97CXak4RVcrAyRbJigq9AKzRBA57sGBNtkbDBhBFcB8XLb-weBDzedVraW20KjcVTTCwXd8fyql1sFXapC8uMlvdIwL_NzkUcD-bj0hcVtW1YF9argbcjBniEn0Ngvhgyg1wASKhY81laWVS0HrOkovjaqMDPh9O99dV_zE3c0H-q_mMEwKQCyNLXQi8XRTw-y0L0d41zq1zRK7QTchyrOZc_RN8mqb_wA6K8NA8tYWGW9Oz5r1J-QB_oxt_hmSSuDUUjoW6avF7TBoqTyNLIXWc_V-8p_lEB8wsEekRvkWlIu8OKueCxF-LdqNJ8hrszwzAJHAkkx4lu-_3h0VjZLNhEotjcgNU-m6Vob-bAtiBG2lZL0XzqGjwDZawPGmDCjNRoW6dZXhmGdphQHy_cE_DbC-fgUk2n6Lh9j37ldM-KAiuEinkkzZWYIX9kWck0HLhg4w-nVkN8VF9hExeO0VKH87Yzy_dvHQIqTj3t4-6m88lB96k5B2HMcAUFYPrx3uXD8P95Lapjzv7J5-_VJPi7BSlF3YPJ99JWSDJZ1lJJ3scbrUEU3Cw3OusbvBGaHojO-4jy6K9Tn7z-T1jvfYp8YAlvyh5C2JDMBG9IiUATgVCGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFlZWQ0MmE5YTk0NjUyZTgyODhmYzE5NDkxNTNjMzExOWQzZTQ5ZmNkY2Y5ODEyYjA5NDJhZjk4YTg0MjYyMTBiYWI0NjBmOWRkNzA0ZmEwIn0.eyJhdWQiOiI3IiwianRpIjoiYWVlZDQyYTlhOTQ2NTJlODI4OGZjMTk0OTE1M2MzMTE5ZDNlNDlmY2RjZjk4MTJiMDk0MmFmOThhODQyNjIxMGJhYjQ2MGY5ZGQ3MDRmYTAiLCJpYXQiOjE2Mjc5ODQwMTcsIm5iZiI6MTYyNzk4NDAxNywiZXhwIjoxNjU5NTIwMDE3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ljD-27Iz5R6HKgw5rLhxMNlgDOKxnSvj-TVy6_Tv4C9H_Fp8TAA-Q7wAi_9voojGcwe--7NjQymgI3-MyNrjMWWOp-57JN6mB0mHAM-q17Oknp6QSzo0rLM9JQAifqzLa2rGrpwRgIzRLJTLM0ZwT4rMeNtwRWpv4LnsfNRIr5hve7B6-vYtGXSDlx2C3IqeMhrpxeMqCfMYAgiq9IN5amCjTcNE56s8XTJzesO-tQH6bnalIU5kuUW4YO-LsEUdqb5ki3YCwRgTxJkr3jdXZABuVQr4Betiw-T_i17AhXcxnR75MV8otZT4XehoRdAPDqEUCTTkN0wv7sxx2868ma04_XFbscUSFXHN1gMxUyx1gYYACDFJTK6KkdnqdMZXPPrrxwIff36TToEhjFVrmNMWtd_DmsaaFVp7UL1Sk_ov_H5DRXehnbrWJxZqHBHwGHw9_47OPU9Pk3GMOJEkVC9NMcmxeQhPwdr8r78t6MKsJ5TkQeBf8AFwUg1vsAz1RyLRTYO2w_IbWOEqKFuMogVqpTw6T28UFEkxjBZljIZzX9ezlhW9ZHfbKq2Gzs3svVdvIimhNXYvImbjsILEz46ghkVb1XAq6fyKEv2wVDcBhuNLF0zJ-exlRgnp0ShDLcOoQ-ukbjuQDeujWw4u17JhC4U_AGrtesP2ir2-asA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobile_number",
+									"value": "03474923922",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}user/add/phone/number",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"add",
+								"phone",
+								"number"
+							],
+							"query": [
+								{
+									"key": "mobile_number",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "update user phone number"
+					},
+					"response": []
+				},
+				{
+					"name": "update user profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validate ResponseHeader object\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader).to.exist.and.to.be.an('object');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data object contains the required fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.data).to.exist;\r",
+									"    pm.expect(responseData.data.id).to.exist;\r",
+									"    pm.expect(responseData.data.email).to.exist;\r",
+									"    pm.expect(responseData.data.contact_no_1).to.exist;\r",
+									"    pm.expect(responseData.data.first_name).to.exist;\r",
+									"    pm.expect(responseData.data.last_name).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Email is in a valid format\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.data.email).to.be.a('string').and.to.match(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contact number is in a valid format\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.data.contact_no_1).to.be.a('string').and.to.match(/^\\d{10}$/);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzY2EwOWJiMGEzYjljNjM4YTNmNGIwZTg4M2I4ZTIzOTU2NTFmYjFmMzBhZTk0ZDI2MWQ3ODEwZWVhMDE2OTdjNDFmY2ZiOThkMDUyNTJlIiwiaWF0IjoxNzA4OTM1MDY4Ljk4MjU4NiwibmJmIjoxNzA4OTM1MDY4Ljk4MjU4OCwiZXhwIjoxNzQwNTU3NDY4Ljk3OTgxOCwic3ViIjoiNjU4NiIsInNjb3BlcyI6W119.rHqUAFcbClV5qmKFT_H3k1CCIfMOYAqqcqRaRSAEmB5c4w16hlItB78tJ97CXak4RVcrAyRbJigq9AKzRBA57sGBNtkbDBhBFcB8XLb-weBDzedVraW20KjcVTTCwXd8fyql1sFXapC8uMlvdIwL_NzkUcD-bj0hcVtW1YF9argbcjBniEn0Ngvhgyg1wASKhY81laWVS0HrOkovjaqMDPh9O99dV_zE3c0H-q_mMEwKQCyNLXQi8XRTw-y0L0d41zq1zRK7QTchyrOZc_RN8mqb_wA6K8NA8tYWGW9Oz5r1J-QB_oxt_hmSSuDUUjoW6avF7TBoqTyNLIXWc_V-8p_lEB8wsEekRvkWlIu8OKueCxF-LdqNJ8hrszwzAJHAkkx4lu-_3h0VjZLNhEotjcgNU-m6Vob-bAtiBG2lZL0XzqGjwDZawPGmDCjNRoW6dZXhmGdphQHy_cE_DbC-fgUk2n6Lh9j37ldM-KAiuEinkkzZWYIX9kWck0HLhg4w-nVkN8VF9hExeO0VKH87Yzy_dvHQIqTj3t4-6m88lB96k5B2HMcAUFYPrx3uXD8P95Lapjzv7J5-_VJPi7BSlF3YPJ99JWSDJZ1lJJ3scbrUEU3Cw3OusbvBGaHojO-4jy6K9Tn7z-T1jvfYp8YAlvyh5C2JDMBG9IiUATgVCGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk0MTBhYTJjYTcwNDJkYmIwNzVlYjk1YjY5NGQ4NmFlYjFiZGZjNTg3NDMyYWM0ZmNjM2IzODQzYjA1M2Q5NDE3MTkyYjFkN2IwNTk1NWIxIn0.eyJhdWQiOiIzIiwianRpIjoiOTQxMGFhMmNhNzA0MmRiYjA3NWViOTViNjk0ZDg2YWViMWJkZmM1ODc0MzJhYzRmY2MzYjM4NDNiMDUzZDk0MTcxOTJiMWQ3YjA1OTU1YjEiLCJpYXQiOjE1ODcxOTk1NjksIm5iZiI6MTU4NzE5OTU2OSwiZXhwIjoxNjE4NzM1NTY5LCJzdWIiOiI3MyIsInNjb3BlcyI6W119.WfkRVpLZV3XX7T3Ivu4h7RfvEWBUH8Z8VEZoAKHhNvOvzRMge1GeA_O-VQnqGpAIsTUbFVulFi2PpJmWe77zVg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "talha",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "shaikh",
+									"type": "text"
+								},
+								{
+									"key": "contact_name",
+									"value": "03003798524",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}user/profile/update",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"profile",
+								"update"
+							]
+						},
+						"description": "update user profile"
+					},
+					"response": []
+				},
+				{
+					"name": "popular Restaurants",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.have.all.keys(",
+									"        'current_page', 'data', 'first_page_url', 'from', 'last_page', ",
+									"        'last_page_url', 'links', 'next_page_url', 'path', 'per_page', ",
+									"        'prev_page_url', 'to', 'total'",
+									"    );",
+									"});",
+									"",
+									"",
+									"pm.test(\"Data is an array and is not empty\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.data).to.be.an('array').and.to.not.be.empty;",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzY2EwOWJiMGEzYjljNjM4YTNmNGIwZTg4M2I4ZTIzOTU2NTFmYjFmMzBhZTk0ZDI2MWQ3ODEwZWVhMDE2OTdjNDFmY2ZiOThkMDUyNTJlIiwiaWF0IjoxNzA4OTM1MDY4Ljk4MjU4NiwibmJmIjoxNzA4OTM1MDY4Ljk4MjU4OCwiZXhwIjoxNzQwNTU3NDY4Ljk3OTgxOCwic3ViIjoiNjU4NiIsInNjb3BlcyI6W119.rHqUAFcbClV5qmKFT_H3k1CCIfMOYAqqcqRaRSAEmB5c4w16hlItB78tJ97CXak4RVcrAyRbJigq9AKzRBA57sGBNtkbDBhBFcB8XLb-weBDzedVraW20KjcVTTCwXd8fyql1sFXapC8uMlvdIwL_NzkUcD-bj0hcVtW1YF9argbcjBniEn0Ngvhgyg1wASKhY81laWVS0HrOkovjaqMDPh9O99dV_zE3c0H-q_mMEwKQCyNLXQi8XRTw-y0L0d41zq1zRK7QTchyrOZc_RN8mqb_wA6K8NA8tYWGW9Oz5r1J-QB_oxt_hmSSuDUUjoW6avF7TBoqTyNLIXWc_V-8p_lEB8wsEekRvkWlIu8OKueCxF-LdqNJ8hrszwzAJHAkkx4lu-_3h0VjZLNhEotjcgNU-m6Vob-bAtiBG2lZL0XzqGjwDZawPGmDCjNRoW6dZXhmGdphQHy_cE_DbC-fgUk2n6Lh9j37ldM-KAiuEinkkzZWYIX9kWck0HLhg4w-nVkN8VF9hExeO0VKH87Yzy_dvHQIqTj3t4-6m88lB96k5B2HMcAUFYPrx3uXD8P95Lapjzv7J5-_VJPi7BSlF3YPJ99JWSDJZ1lJJ3scbrUEU3Cw3OusbvBGaHojO-4jy6K9Tn7z-T1jvfYp8YAlvyh5C2JDMBG9IiUATgVCGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{dc_costumer}}restaurant/mostpopular?page1",
+							"host": [
+								"{{dc_costumer}}restaurant"
+							],
+							"path": [
+								"mostpopular"
+							],
+							"query": [
+								{
+									"key": "page1",
+									"value": null
+								}
+							]
+						},
+						"description": "Most Popular Restaurants"
+					},
+					"response": []
+				},
+				{
+					"name": "cuisines count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"ResponseHeader object should exist and be an object\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.ResponseHeader).to.exist.and.to.be.an('object');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dc_costumer}}restaurant/cuisines",
+							"host": [
+								"{{dc_costumer}}restaurant"
+							],
+							"path": [
+								"cuisines"
+							]
+						},
+						"description": "cuisines count"
+					},
+					"response": []
+				},
+				{
+					"name": "user order list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwNTJkMjJlODFmMjRkM2ZkNGU4MWU3MTg5ZmNiZjg2YWM5ZDk0N2IxNGQxZWNiMzk2M2NlOTczYjRkNjRmMTMwMjljNDA5YTkwNzNkY2M4In0.eyJhdWQiOiI3IiwianRpIjoiNDA1MmQyMmU4MWYyNGQzZmQ0ZTgxZTcxODlmY2JmODZhYzlkOTQ3YjE0ZDFlY2IzOTYzY2U5NzNiNGQ2NGYxMzAyOWM0MDlhOTA3M2RjYzgiLCJpYXQiOjE2NDM5NTc4NDQsIm5iZiI6MTY0Mzk1Nzg0NCwiZXhwIjoxNjc1NDkzODQ0LCJzdWIiOiIzMTM2Iiwic2NvcGVzIjpbXX0.eXJ5HML_Lgq6fLpUpV0Rhn7UZ7ji8xoW2NtjXeoHpBbjFfa18DUwTV8FtuVD_FXGNB4O0bWMI8zp4STosYyg5bDWja62bMF24qJYu2xrO2sjCK5et1Hqd_ZAOIknCCvHi0VRcc_WimRM9iZYyO1u2aZV1IfzQXdlDyad50Nvg-qfJ7kNDFGoD5ExiKTZqpWz5f4JlkKqCuChyOU13-FHFxr-NWeKTMXUDu4HxAFZmfjmUYXt4YrDWu_YUqSBTgPv9mi522uvD0LJHmMoywAo1SfNDu2ihGLPTEKBtvxYVweIzbaBLDI6-9BXFld361VUrM9aQgpv9v8lZEgGjft91fw6l-QvZMt12DGypB_aiaxsbYR5Dw7MTPxREEEW4VibqYL-2EZjJ9QDuU7xhzgz-xn9b5YfsTuBS9WQoapF_uDtCXRJwPBpI8vWVrACKXXYm8WrcHBMxw6GNErD_oWSd2WpP7vR0LZIsGR54fKBrsgGvxJXbCDTnrV5X57MGB7Iyxb0UnuHLeH4DygE6uaftyPB4zKH-s52e8YRvp9VUpvU-lDTU8AvHo97lDlPAbaeMMKhtTvqxHSDZybniccH9BygC7nZuOWP8oGTgnPTsKzqcqy-MmemtTwy9U6Fz_x6Bp6U28QVcbd8X2hZK6gy0yfUOM69qTIwo-sv3uOY8oo"
+							}
+						],
+						"url": {
+							"raw": "{{dc_costumer}}user/orders",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"orders"
+							]
+						},
+						"description": "order list"
+					},
+					"response": []
+				},
+				{
+					"name": "user order detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 401\", function () {\r",
+									"  pm.expect(pm.response.code).to.equal(401);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has a 'message' field\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.have.property('message');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Message field should not be empty\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.message).to.exist.and.to.have.lengthOf.at.least(1, \"Message field should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Order_id parameter is present in the request URL\", function () {\r",
+									"    const requestUrl = pm.request.url;\r",
+									"    \r",
+									"    pm.expect(requestUrl).to.include(\"order_id\").and.to.include(\"20293\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response content type is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has the required fields - status, message\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.status).to.exist;\r",
+									"    pm.expect(responseData.message).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status message is in a valid format\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.message).to.be.a('string').and.to.not.be.empty;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Verify that the 'order_id' parameter is correctly reflected in the response\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.order_id).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Ensure the response message is human-readable and provides meaningful information\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.message).to.exist.and.to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Check if the response message is in the expected language\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.message).to.exist;\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwNTJkMjJlODFmMjRkM2ZkNGU4MWU3MTg5ZmNiZjg2YWM5ZDk0N2IxNGQxZWNiMzk2M2NlOTczYjRkNjRmMTMwMjljNDA5YTkwNzNkY2M4In0.eyJhdWQiOiI3IiwianRpIjoiNDA1MmQyMmU4MWYyNGQzZmQ0ZTgxZTcxODlmY2JmODZhYzlkOTQ3YjE0ZDFlY2IzOTYzY2U5NzNiNGQ2NGYxMzAyOWM0MDlhOTA3M2RjYzgiLCJpYXQiOjE2NDM5NTc4NDQsIm5iZiI6MTY0Mzk1Nzg0NCwiZXhwIjoxNjc1NDkzODQ0LCJzdWIiOiIzMTM2Iiwic2NvcGVzIjpbXX0.eXJ5HML_Lgq6fLpUpV0Rhn7UZ7ji8xoW2NtjXeoHpBbjFfa18DUwTV8FtuVD_FXGNB4O0bWMI8zp4STosYyg5bDWja62bMF24qJYu2xrO2sjCK5et1Hqd_ZAOIknCCvHi0VRcc_WimRM9iZYyO1u2aZV1IfzQXdlDyad50Nvg-qfJ7kNDFGoD5ExiKTZqpWz5f4JlkKqCuChyOU13-FHFxr-NWeKTMXUDu4HxAFZmfjmUYXt4YrDWu_YUqSBTgPv9mi522uvD0LJHmMoywAo1SfNDu2ihGLPTEKBtvxYVweIzbaBLDI6-9BXFld361VUrM9aQgpv9v8lZEgGjft91fw6l-QvZMt12DGypB_aiaxsbYR5Dw7MTPxREEEW4VibqYL-2EZjJ9QDuU7xhzgz-xn9b5YfsTuBS9WQoapF_uDtCXRJwPBpI8vWVrACKXXYm8WrcHBMxw6GNErD_oWSd2WpP7vR0LZIsGR54fKBrsgGvxJXbCDTnrV5X57MGB7Iyxb0UnuHLeH4DygE6uaftyPB4zKH-s52e8YRvp9VUpvU-lDTU8AvHo97lDlPAbaeMMKhtTvqxHSDZybniccH9BygC7nZuOWP8oGTgnPTsKzqcqy-MmemtTwy9U6Fz_x6Bp6U28QVcbd8X2hZK6gy0yfUOM69qTIwo-sv3uOY8oo"
+							}
+						],
+						"url": {
+							"raw": "{{dc_costumer}}user/order/detail?order_id=20293",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"order",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "order_id",
+									"value": "20293"
+								}
+							]
+						},
+						"description": "user order detail"
+					},
+					"response": []
+				},
+				{
+					"name": "create cart",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 401\", function () {\r",
+									"  pm.expect(pm.response.code).to.equal(401);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required Content-Type header with value application/json\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Message field is present in the response\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.message).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Message field is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.message).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Message field should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Verify response body does not contain sensitive information\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData).to.not.have.any.keys('password', 'creditCardNumber', 'ssn', 'token');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg3MTE0OGJhOGQzZmFkNDE0MTA4MWVlZTU1NGRmYjk0NGFjYzRlNzE3MTUwZWJkYzU2NmYzOTdmMjQ3YWU0YWZkMDEyNjc0MzZhNzg3MjE3In0.eyJhdWQiOiI3IiwianRpIjoiODcxMTQ4YmE4ZDNmYWQ0MTQxMDgxZWVlNTU0ZGZiOTQ0YWNjNGU3MTcxNTBlYmRjNTY2ZjM5N2YyNDdhZTRhZmQwMTI2NzQzNmE3ODcyMTciLCJpYXQiOjE2MjkxMTE1MzMsIm5iZiI6MTYyOTExMTUzMywiZXhwIjoxNjYwNjQ3NTMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XhiIY8eXQEpndCx8bE8pQpLwSokk3aE4QL192sYGozlyMpkBVY8LhIrecXrg1a6m0gHSTa4CRbhfCfEO_HlLgc-sIUFaaGDtYsBvgr7syuTm_26md2irIKWRzennKiIEoDzo0PL9hc6Y78DgkF0s-jWx6f-aMD0C6ShZWqIJFkF1-rbE5UZYtEE7cz5uPM5QjBS5oDndc62f3LxkssUk7x-rZihmNkF_TV7JKBRc_MLh8NmlE_4xrY1s4rn856Gm0dXDRwpVwx3nM8oHW3RKWB2w4hEPRWJ3a2oHrDI7xP5Rlnga_rFVfdVQOGJpx38awJLUigNF0zhtMDolVXJ1rxHEZhH3r07u47sNQ-uxKwfGm5ZyWxEwrNc6cq9ew7UOvXCh0WemsbkXyQyHGmVTkJxv-qG-vQpKpu-R1pUBNSAM0fVDeOZCw2lQ0b4tignocFf8MJhbS8QyzsjiVwbseqb5OVqGHzTWhSSyzSFH-2Xbe2KKtqsHsfjvtQbKYjSJfQpqKyJALjXZdGW8_1HbpGilw1Id0jd69crwc8KN0erA8o54Ao-NJiMiE3OEiVTNFjFy90446tDQJVAkJfXb_497imNgWVI9SftGHc-NfrjhU05RPW-JPSzaQf1YOHFUcVuQ-DdQpbUYlvuuXOI85KL7dnSQ1-YDs9goa9peQa0"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "1",
+									"description": "required.id of product or deal",
+									"type": "text"
+								},
+								{
+									"key": "serving_id",
+									"value": "11",
+									"description": "required if type is Product.it is serving size of product",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Product",
+									"description": "it should be Product or Deal",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "addons_product[17]",
+									"value": "43",
+									"description": "optional.17 is addon id and its value is addon product model id.",
+									"type": "text"
+								},
+								{
+									"key": "addons_product[6][]",
+									"value": "14",
+									"description": "optional.6 is addon id and its value is addon product model id.nested array coz addons can be multiple selection(checkboxes)",
+									"type": "text"
+								},
+								{
+									"key": "order_placed_platform",
+									"value": "App",
+									"description": "flag",
+									"type": "text"
+								},
+								{
+									"key": "addons_product[7]",
+									"value": "15",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "rub_id",
+									"value": "2",
+									"description": "optional ,rub choices.send just id",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}cart/add-product",
+							"host": [
+								"{{dc_costumer}}cart"
+							],
+							"path": [
+								"add-product"
+							]
+						},
+						"description": "create cart"
+					},
+					"response": []
+				},
+				{
+					"name": "get cart detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has a ResponseHeader object\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader).to.exist.and.to.be.an('object');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Responseheader object has ResponseCode and ResponseMessage fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.ResponseHeader).to.exist.and.to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist;\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data object is present in the response\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.data).to.exist;\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzY2EwOWJiMGEzYjljNjM4YTNmNGIwZTg4M2I4ZTIzOTU2NTFmYjFmMzBhZTk0ZDI2MWQ3ODEwZWVhMDE2OTdjNDFmY2ZiOThkMDUyNTJlIiwiaWF0IjoxNzA4OTM1MDY4Ljk4MjU4NiwibmJmIjoxNzA4OTM1MDY4Ljk4MjU4OCwiZXhwIjoxNzQwNTU3NDY4Ljk3OTgxOCwic3ViIjoiNjU4NiIsInNjb3BlcyI6W119.rHqUAFcbClV5qmKFT_H3k1CCIfMOYAqqcqRaRSAEmB5c4w16hlItB78tJ97CXak4RVcrAyRbJigq9AKzRBA57sGBNtkbDBhBFcB8XLb-weBDzedVraW20KjcVTTCwXd8fyql1sFXapC8uMlvdIwL_NzkUcD-bj0hcVtW1YF9argbcjBniEn0Ngvhgyg1wASKhY81laWVS0HrOkovjaqMDPh9O99dV_zE3c0H-q_mMEwKQCyNLXQi8XRTw-y0L0d41zq1zRK7QTchyrOZc_RN8mqb_wA6K8NA8tYWGW9Oz5r1J-QB_oxt_hmSSuDUUjoW6avF7TBoqTyNLIXWc_V-8p_lEB8wsEekRvkWlIu8OKueCxF-LdqNJ8hrszwzAJHAkkx4lu-_3h0VjZLNhEotjcgNU-m6Vob-bAtiBG2lZL0XzqGjwDZawPGmDCjNRoW6dZXhmGdphQHy_cE_DbC-fgUk2n6Lh9j37ldM-KAiuEinkkzZWYIX9kWck0HLhg4w-nVkN8VF9hExeO0VKH87Yzy_dvHQIqTj3t4-6m88lB96k5B2HMcAUFYPrx3uXD8P95Lapjzv7J5-_VJPi7BSlF3YPJ99JWSDJZ1lJJ3scbrUEU3Cw3OusbvBGaHojO-4jy6K9Tn7z-T1jvfYp8YAlvyh5C2JDMBG9IiUATgVCGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJlMTAwNzUxZjJjMDkxMDVlMWE2NzM1MWZhOTIxZDFkMzJiNTc0YzE1NzQxMTBiM2YwYzZmNmM2ODIyYTdjMjgwODNlNTIxZTRjNTAzZTQ5In0.eyJhdWQiOiI3IiwianRpIjoiMmUxMDA3NTFmMmMwOTEwNWUxYTY3MzUxZmE5MjFkMWQzMmI1NzRjMTU3NDExMGIzZjBjNmY2YzY4MjJhN2MyODA4M2U1MjFlNGM1MDNlNDkiLCJpYXQiOjE2NDczNDYwOTgsIm5iZiI6MTY0NzM0NjA5OCwiZXhwIjoxNjc4ODgyMDk4LCJzdWIiOiI4Mzg1Iiwic2NvcGVzIjpbXX0.K5yPE0GB6WTi8LTaDYXMeC4gpcHkkxpKR-ack99EypOknWtLhdp1QupAuRo95_c0s5XLzgge_ieXNkgSFuu-HV1Ed06aIxxFxvimTQR7XxH2pZTv_P5p9YcFC9Obj0Yr1_rDmEIeqgOTf9xh4crIxL5B182LXogbCwwGJGcVgxJx-vuwCmQWigdQlJSWzKTrL22Z4eqbU9lFyXxuh3OjWevqAj7ZsGu0q7rewVSInSvCWp2OdDlh3ar7z_N2TbcXYgrZMNd_6FVyePuVRvZhV0ka3ssKu01W_U7JNEEIZq0_6TH8BNxaAosJEwedko3J-mgY_kt4JncFyuISHtck_YBKVBmVgSrQensw4s140s0A5fvT4oB7Va9NC3jnLGSWdxJBJ0Zsj57aBHm-mKrRsjwxmyAJAWwvMnajUZwXqFdfHylUg9tpEAV5m417e1xpadwM183t4wC2lL1tybOtz7LUngIXaHRK2wPvidH4OXGwDlGVdB_b2UG6iCPM6N1DtsGeiB4UCatgr6dohnEpYryIOV8f5bzO0CIuAtibpAXS93Mn4gBytRRPTphgl_QpZIi_o3IuF-0CiCohZWj83DTbllZo6sKvdP10P_O_h_01Hk7pPuPrtxSN8mqs9HkdhA9rniDjsjxEbPULePwYAQZvnvVjnfw8AOILnz82efs"
+							}
+						],
+						"url": {
+							"raw": "{{dc_costumer}}cart/detail",
+							"host": [
+								"{{dc_costumer}}cart"
+							],
+							"path": [
+								"detail"
+							],
+							"query": [
+								{
+									"key": "cart_id",
+									"value": "82",
+									"disabled": true
+								}
+							]
+						},
+						"description": "get cart detail"
+					},
+					"response": []
+				},
+				{
+					"name": "remove cart products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"  pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has ResponseHeader with ResponseCode and ResponseMessage fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader).to.exist.and.to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist;\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data field is present in the response\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.data).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"ResponseCode is a non-negative integer\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.be.a('number');\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.be.at.least(0);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzY2EwOWJiMGEzYjljNjM4YTNmNGIwZTg4M2I4ZTIzOTU2NTFmYjFmMzBhZTk0ZDI2MWQ3ODEwZWVhMDE2OTdjNDFmY2ZiOThkMDUyNTJlIiwiaWF0IjoxNzA4OTM1MDY4Ljk4MjU4NiwibmJmIjoxNzA4OTM1MDY4Ljk4MjU4OCwiZXhwIjoxNzQwNTU3NDY4Ljk3OTgxOCwic3ViIjoiNjU4NiIsInNjb3BlcyI6W119.rHqUAFcbClV5qmKFT_H3k1CCIfMOYAqqcqRaRSAEmB5c4w16hlItB78tJ97CXak4RVcrAyRbJigq9AKzRBA57sGBNtkbDBhBFcB8XLb-weBDzedVraW20KjcVTTCwXd8fyql1sFXapC8uMlvdIwL_NzkUcD-bj0hcVtW1YF9argbcjBniEn0Ngvhgyg1wASKhY81laWVS0HrOkovjaqMDPh9O99dV_zE3c0H-q_mMEwKQCyNLXQi8XRTw-y0L0d41zq1zRK7QTchyrOZc_RN8mqb_wA6K8NA8tYWGW9Oz5r1J-QB_oxt_hmSSuDUUjoW6avF7TBoqTyNLIXWc_V-8p_lEB8wsEekRvkWlIu8OKueCxF-LdqNJ8hrszwzAJHAkkx4lu-_3h0VjZLNhEotjcgNU-m6Vob-bAtiBG2lZL0XzqGjwDZawPGmDCjNRoW6dZXhmGdphQHy_cE_DbC-fgUk2n6Lh9j37ldM-KAiuEinkkzZWYIX9kWck0HLhg4w-nVkN8VF9hExeO0VKH87Yzy_dvHQIqTj3t4-6m88lB96k5B2HMcAUFYPrx3uXD8P95Lapjzv7J5-_VJPi7BSlF3YPJ99JWSDJZ1lJJ3scbrUEU3Cw3OusbvBGaHojO-4jy6K9Tn7z-T1jvfYp8YAlvyh5C2JDMBG9IiUATgVCGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjhhYTc2Y2M2NzY4NTU2Y2Y2Zjg0Zjk5Nzg5MDcyNTAzZmQ1ZmQyNWVkMzFiYjI1OTQxMGE2ZGMyNjg1ZTJkZWMwYjI3NDM2MDEwNmI4NmM3In0.eyJhdWQiOiI3IiwianRpIjoiOGFhNzZjYzY3Njg1NTZjZjZmODRmOTk3ODkwNzI1MDNmZDVmZDI1ZWQzMWJiMjU5NDEwYTZkYzI2ODVlMmRlYzBiMjc0MzYwMTA2Yjg2YzciLCJpYXQiOjE2MjIwMTQzOTgsIm5iZiI6MTYyMjAxNDM5OCwiZXhwIjoxNjUzNTUwMzk4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.d-HvNA06fPUoDHzXqHwfxvPkfhTyKjJ0_qpmRgRDZrL1499XJM8NyH61UvXEcisTcuV4irz9zen6bph35G-VljF9OS8RNxuvz9SZdETG8puDXNnzA5MlHJnc2ReeMMpZoFf76ug8DwusONdkwxNAkSzxsr0m_Smk3QTXsvXMdwLl0-_csbnhqslbomJy_ioT0zulzWDO5G01rV-q-xsvNd-FENr_Jsm738czCEr4VDhvEo5nPY56ETEHGtmdD0AZB5witmGNn-enxES86u6jLHOFJNMxK7VF9ftQKUMCFNtfauW0mCHZ1dU0GFKTMHg01HcxSYZo3CSWFHI8kISMpXgp6SUvrY10w_oXKQ3XqkNsGHKcMgszYuHnWyHrdjR3Z1sN077HCwo6uH_AsLHpSAH5e3K038qz9OCJESsBDFJjfIjn7IMPvcNAb8ywMjCPPRDO3mbH_07iznddksULTPJX8b9XopMaa4E8grNkhVtamuE0uP72b24Dz7Lmzw5qOOdp3DcBR1zyzQiCJSMtTQ_ruf1-9USxuDOh2NatXgvVg3AYQeFV17bruY41zHqRqowmPJtWm7J_VsmIK0SRs7-nCHkVeHy3Gnoke-niv4wfj3AR3gNG9dcAXK6-sZV7omjo3Up3qAAi3qDgEjxmAhIvENGj2tfBQrYRtV0PKvE"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "1815",
+									"description": "table id.metioned below.",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "CartProduct",
+									"description": "it should be CartProduct or CartDeal.these are models",
+									"type": "text"
+								},
+								{
+									"key": "order_placed_platform",
+									"value": "App",
+									"description": "just a flag.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}cart/remove-product",
+							"host": [
+								"{{dc_costumer}}cart"
+							],
+							"path": [
+								"remove-product"
+							]
+						},
+						"description": "remove cart products"
+					},
+					"response": []
+				},
+				{
+					"name": "order status list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required fields - ResponseHeader and data\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader).to.exist;\r",
+									"    pm.expect(responseData.data).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"ResponseHeader contains ResponseCode and ResponseMessage\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.ResponseHeader).to.exist;\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseCode).to.exist;\r",
+									"    pm.expect(responseData.ResponseHeader.ResponseMessage).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data array is present and contains the expected number of elements\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.data).to.exist.and.to.be.an('array');\r",
+									"    pm.expect(responseData.data).to.have.lengthOf(1);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Id is a non-negative integer\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.data).to.be.an('array');\r",
+									"    \r",
+									"    responseData.data.forEach(function(item) {\r",
+									"        pm.expect(item.id).to.be.a('number');\r",
+									"        pm.expect(item.id).to.be.at.least(0);\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzY2EwOWJiMGEzYjljNjM4YTNmNGIwZTg4M2I4ZTIzOTU2NTFmYjFmMzBhZTk0ZDI2MWQ3ODEwZWVhMDE2OTdjNDFmY2ZiOThkMDUyNTJlIiwiaWF0IjoxNzA4OTM1MDY4Ljk4MjU4NiwibmJmIjoxNzA4OTM1MDY4Ljk4MjU4OCwiZXhwIjoxNzQwNTU3NDY4Ljk3OTgxOCwic3ViIjoiNjU4NiIsInNjb3BlcyI6W119.rHqUAFcbClV5qmKFT_H3k1CCIfMOYAqqcqRaRSAEmB5c4w16hlItB78tJ97CXak4RVcrAyRbJigq9AKzRBA57sGBNtkbDBhBFcB8XLb-weBDzedVraW20KjcVTTCwXd8fyql1sFXapC8uMlvdIwL_NzkUcD-bj0hcVtW1YF9argbcjBniEn0Ngvhgyg1wASKhY81laWVS0HrOkovjaqMDPh9O99dV_zE3c0H-q_mMEwKQCyNLXQi8XRTw-y0L0d41zq1zRK7QTchyrOZc_RN8mqb_wA6K8NA8tYWGW9Oz5r1J-QB_oxt_hmSSuDUUjoW6avF7TBoqTyNLIXWc_V-8p_lEB8wsEekRvkWlIu8OKueCxF-LdqNJ8hrszwzAJHAkkx4lu-_3h0VjZLNhEotjcgNU-m6Vob-bAtiBG2lZL0XzqGjwDZawPGmDCjNRoW6dZXhmGdphQHy_cE_DbC-fgUk2n6Lh9j37ldM-KAiuEinkkzZWYIX9kWck0HLhg4w-nVkN8VF9hExeO0VKH87Yzy_dvHQIqTj3t4-6m88lB96k5B2HMcAUFYPrx3uXD8P95Lapjzv7J5-_VJPi7BSlF3YPJ99JWSDJZ1lJJ3scbrUEU3Cw3OusbvBGaHojO-4jy6K9Tn7z-T1jvfYp8YAlvyh5C2JDMBG9IiUATgVCGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dc_costumer}}order/status/list",
+							"host": [
+								"{{dc_costumer}}order"
+							],
+							"path": [
+								"status",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order_id",
+									"value": "4",
+									"disabled": true
+								}
+							]
+						},
+						"description": "order status list"
+					},
+					"response": []
+				},
+				{
+					"name": "get restaurant feedback list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dc_costumer}}restaurant/feedback/list?venue_id=1",
+							"host": [
+								"{{dc_costumer}}restaurant"
+							],
+							"path": [
+								"feedback",
+								"list"
+							],
+							"query": [
+								{
+									"key": "venue_id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "get restaurant feedback list"
+					},
+					"response": []
+				},
+				{
+					"name": "get restaurants list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dc_costumer}}restaurant/list",
+							"host": [
+								"{{dc_costumer}}restaurant"
+							],
+							"path": [
+								"list"
+							]
+						},
+						"description": "get restaurants list"
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant product addons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dc_costumer}}restaurant/product/addons?item_type=Product&item_id=14&servingsize=2",
+							"host": [
+								"{{dc_costumer}}restaurant"
+							],
+							"path": [
+								"product",
+								"addons"
+							],
+							"query": [
+								{
+									"key": "venue_id",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "item_type",
+									"value": "Product",
+									"description": "two types Product or Deal."
+								},
+								{
+									"key": "item_id",
+									"value": "14",
+									"description": "id of product or deal"
+								},
+								{
+									"key": "servingsize",
+									"value": "2",
+									"description": "it is selected product serving size.required if u choose Product."
+								}
+							]
+						},
+						"description": "restaurant product addons"
+					},
+					"response": []
+				},
+				{
+					"name": "update product quantity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImUzMTMxZWZhNTlhNDkyY2YzMDZmYjdiY2VjMTc0ZjU1NjQ0ODEwMGQ1YzdhNTM4MDQ3Y2I4NmUxNTdkYWY3OWMzZDZlYWQxMGYxODc3MDI5In0.eyJhdWQiOiIzIiwianRpIjoiZTMxMzFlZmE1OWE0OTJjZjMwNmZiN2JjZWMxNzRmNTU2NDQ4MTAwZDVjN2E1MzgwNDdjYjg2ZTE1N2RhZjc5YzNkNmVhZDEwZjE4NzcwMjkiLCJpYXQiOjE1ODc0OTMyNjUsIm5iZiI6MTU4NzQ5MzI2NSwiZXhwIjoxNjE5MDI5MjY1LCJzdWIiOiI3MSIsInNjb3BlcyI6W119.EiuKv5paxj1rzQK-kLS3y2lsUrFtm2wr9M_NqA3h6jRxURbRokOzWcGotasswVYlVVnozyifBoux7SAe0vi2Bw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "item_id",
+									"value": "92",
+									"description": "cart item id.this id is should be from tables mentioned below.",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "CartProduct",
+									"description": "two typs.it is associated with tables CartProduct and CartDeal.if you are removing product then use CartProduct if Deal then put CartDeal",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_id",
+									"value": "50",
+									"description": "user cart id",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}cart/product/updatequantity",
+							"host": [
+								"{{dc_costumer}}cart"
+							],
+							"path": [
+								"product",
+								"updatequantity"
+							]
+						},
+						"description": "update product quantity"
+					},
+					"response": []
+				},
+				{
+					"name": "place order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzY2EwOWJiMGEzYjljNjM4YTNmNGIwZTg4M2I4ZTIzOTU2NTFmYjFmMzBhZTk0ZDI2MWQ3ODEwZWVhMDE2OTdjNDFmY2ZiOThkMDUyNTJlIiwiaWF0IjoxNzA4OTM1MDY4Ljk4MjU4NiwibmJmIjoxNzA4OTM1MDY4Ljk4MjU4OCwiZXhwIjoxNzQwNTU3NDY4Ljk3OTgxOCwic3ViIjoiNjU4NiIsInNjb3BlcyI6W119.rHqUAFcbClV5qmKFT_H3k1CCIfMOYAqqcqRaRSAEmB5c4w16hlItB78tJ97CXak4RVcrAyRbJigq9AKzRBA57sGBNtkbDBhBFcB8XLb-weBDzedVraW20KjcVTTCwXd8fyql1sFXapC8uMlvdIwL_NzkUcD-bj0hcVtW1YF9argbcjBniEn0Ngvhgyg1wASKhY81laWVS0HrOkovjaqMDPh9O99dV_zE3c0H-q_mMEwKQCyNLXQi8XRTw-y0L0d41zq1zRK7QTchyrOZc_RN8mqb_wA6K8NA8tYWGW9Oz5r1J-QB_oxt_hmSSuDUUjoW6avF7TBoqTyNLIXWc_V-8p_lEB8wsEekRvkWlIu8OKueCxF-LdqNJ8hrszwzAJHAkkx4lu-_3h0VjZLNhEotjcgNU-m6Vob-bAtiBG2lZL0XzqGjwDZawPGmDCjNRoW6dZXhmGdphQHy_cE_DbC-fgUk2n6Lh9j37ldM-KAiuEinkkzZWYIX9kWck0HLhg4w-nVkN8VF9hExeO0VKH87Yzy_dvHQIqTj3t4-6m88lB96k5B2HMcAUFYPrx3uXD8P95Lapjzv7J5-_VJPi7BSlF3YPJ99JWSDJZ1lJJ3scbrUEU3Cw3OusbvBGaHojO-4jy6K9Tn7z-T1jvfYp8YAlvyh5C2JDMBG9IiUATgVCGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJlMTAwNzUxZjJjMDkxMDVlMWE2NzM1MWZhOTIxZDFkMzJiNTc0YzE1NzQxMTBiM2YwYzZmNmM2ODIyYTdjMjgwODNlNTIxZTRjNTAzZTQ5In0.eyJhdWQiOiI3IiwianRpIjoiMmUxMDA3NTFmMmMwOTEwNWUxYTY3MzUxZmE5MjFkMWQzMmI1NzRjMTU3NDExMGIzZjBjNmY2YzY4MjJhN2MyODA4M2U1MjFlNGM1MDNlNDkiLCJpYXQiOjE2NDczNDYwOTgsIm5iZiI6MTY0NzM0NjA5OCwiZXhwIjoxNjc4ODgyMDk4LCJzdWIiOiI4Mzg1Iiwic2NvcGVzIjpbXX0.K5yPE0GB6WTi8LTaDYXMeC4gpcHkkxpKR-ack99EypOknWtLhdp1QupAuRo95_c0s5XLzgge_ieXNkgSFuu-HV1Ed06aIxxFxvimTQR7XxH2pZTv_P5p9YcFC9Obj0Yr1_rDmEIeqgOTf9xh4crIxL5B182LXogbCwwGJGcVgxJx-vuwCmQWigdQlJSWzKTrL22Z4eqbU9lFyXxuh3OjWevqAj7ZsGu0q7rewVSInSvCWp2OdDlh3ar7z_N2TbcXYgrZMNd_6FVyePuVRvZhV0ka3ssKu01W_U7JNEEIZq0_6TH8BNxaAosJEwedko3J-mgY_kt4JncFyuISHtck_YBKVBmVgSrQensw4s140s0A5fvT4oB7Va9NC3jnLGSWdxJBJ0Zsj57aBHm-mKrRsjwxmyAJAWwvMnajUZwXqFdfHylUg9tpEAV5m417e1xpadwM183t4wC2lL1tybOtz7LUngIXaHRK2wPvidH4OXGwDlGVdB_b2UG6iCPM6N1DtsGeiB4UCatgr6dohnEpYryIOV8f5bzO0CIuAtibpAXS93Mn4gBytRRPTphgl_QpZIi_o3IuF-0CiCohZWj83DTbllZo6sKvdP10P_O_h_01Hk7pPuPrtxSN8mqs9HkdhA9rniDjsjxEbPULePwYAQZvnvVjnfw8AOILnz82efs"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shipping_type_id",
+									"value": "1",
+									"description": "order type id.means delivery,pickup,dinning",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "cash",
+									"description": "there are two methods card and cash.",
+									"type": "text"
+								},
+								{
+									"key": "customer_address",
+									"value": "7582",
+									"description": "required_if shipping_type_id ==1,which means delivery. user address id.you can get this from user address api.",
+									"type": "text"
+								},
+								{
+									"key": "customer_order_message",
+									"value": "hi this is from app order first",
+									"description": "any text message.optional",
+									"type": "text"
+								},
+								{
+									"key": "order_placed_platform",
+									"value": "app",
+									"description": "it should be 'app'.it is a flag",
+									"type": "text"
+								},
+								{
+									"key": "venue_slug",
+									"value": "brand-bazar-lahore",
+									"description": "any text.",
+									"type": "text"
+								},
+								{
+									"key": "payment_token",
+									"value": "pm_card_threeDSecureRequired",
+									"description": "it is required if you select payment method card.stripe token.",
+									"type": "text"
+								},
+								{
+									"key": "is_voucher_discount",
+									"value": "0",
+									"description": "is_voucher_discount variable is 1 if code is voucher code is given and verified otherwise it will be 0",
+									"type": "text"
+								},
+								{
+									"key": "voucher_discount_code",
+									"value": "",
+									"description": "Voucher Discount Code is optional ",
+									"type": "text"
+								},
+								{
+									"key": "contact_no_1",
+									"value": "0300300331",
+									"type": "text"
+								},
+								{
+									"key": "contact_no_2",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}user/place-order",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"place-order"
+							]
+						},
+						"description": "place order"
+					},
+					"response": []
+				},
+				{
+					"name": "clear user cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzNmRkZWQyOWQ5YmI4MmI5NjRlNDcxZmRmOTJhNWE0OWQzYzY5Yzc3OWI3NDlkMTQxOWRhNDMwYzM3ZGNkYjEyY2MyYWYxZGU5ZGU5MzNlIiwiaWF0IjoxNzEwMjQzMjUyLjE1NzAyLCJuYmYiOjE3MTAyNDMyNTIuMTU3MDIyLCJleHAiOjE3NDE3NzkyNTIuMTUyNzMyLCJzdWIiOiIxNjkyNiIsInNjb3BlcyI6W119.tC-M9pAfuQahePuV-LKnohUhc5upwsX9xen02ZWC7BW0xsEreTa5lemh5Xrw2UXvGGZrh-zG7iSy8O0HLl0vNEM8Fpi3-fAPoZ3c1KtbV8pcphs11edSsVegApDjpvKGWEtOZGy6SKcIXU1C8MxX9A8DqNETPW97zE82nQJEewaGi6drGSsQB2L0yyJtTXCoMzLuQgKNBhXR7iGfkwew64l8YxhYXyKF5DSIyngmZrUIF-PHJtJvUSG0aqhIQhAoXkd61W3-bxGQNz_8smVSAP1mSQjdb6yyu0R4XBwbgh-NGk_fEHklBB91KrxZYBRi_Oq6BZc7LEMf3_Z2quhqhFjJQFYB-6unrGZOqQ92s2ekLAv_G5mtk73uelZcGgGM-Q5ytcB3XP2Rv2P_aUiQh9SfwAB0pItHLCdMltPi_QOuOsm7sd-JjIK92yZYwYvBBPzxb92I_CBPAWc5J5cSdS_wUkY-wREYqHMaOCUXuG0743NZHiZvnenGLnZjVdqsU_2WU7W7h55N7jKbOT0Rhf3XZeMMWe9Yw7hWqQ_Tjz9wTtgxxvImTcDVQL8cmYeAjVLhvGM4BN9i5UwWQryomijV5e2TAtxk63ZEdKEyALcQImpPYDyDiAleq6clLd1UQB9Ldo8rMRn4RcGAhTQK2FOira-jB-ZK1SimCGB18k8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNmNDgyNzZiYjNmMmE4YjZkNmQzYTZjOGQwMTE0MGI5MGJmYjFiZjA2NDA3NTkwNTQ0MDdmNGI1MTc0MjViOTc0NWU5NmFiZTFmYTM1NTM0In0.eyJhdWQiOiI3IiwianRpIjoiM2Y0ODI3NmJiM2YyYThiNmQ2ZDNhNmM4ZDAxMTQwYjkwYmZiMWJmMDY0MDc1OTA1NDQwN2Y0YjUxNzQyNWI5NzQ1ZTk2YWJlMWZhMzU1MzQiLCJpYXQiOjE2MzM1MDg5MTQsIm5iZiI6MTYzMzUwODkxNCwiZXhwIjoxNjY1MDQ0OTE0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Z42k_9ZuWDZYifk0VJShCcA9wrnWQr_GBsRqqyEBgx00om5pC7j2UImEJ-8-ZyGrAf7L6Wtb9E1-UnA-EuUZNxkZXDwFgdi25pNrtyvHnXL2syH7IBeON9oEtM0PZIQR0ULPBLs9H1fDLkZjbf3SVFi8kjk8CDA2GnWl4GzgTiz8kvrcKBUrT_ouV5IgYBVttlCE-RvO9DRq2qBBnO0jym-ntFMJ7QyZU8du0cggFhlQZbk7eJAserUahLVJRrXkrB9v5xTlZCZNDFeDUxkBBotJSHPMh-WZofO57C3tTFWI7ogoL1vYXhX6vpdzJIM5iyIlSd7dAHUNWbYSFpKs0YgtdkvJuNQa8hUqXL6KtLY39PhOpjAvAKDdnaXLacBYw9W_cGZuM2ml-_7HU8fzkmPP6xiFAkXqRt5h45RWv3lVQ4-vGmlQX7JXipZ9AyU39jYwGfjwma8I2lQFKBUkDOfztGrP8QQHEs2UAke8h8S8cxSbmu1xx8uvjYozOibFbqFfJKvi_edphXFRmhm3fPlHsCY69qWkNkUzRL4cGke6cS2gw4U6RF02THVgCrtgVF51-gtOCF6zVwD1fh1Hc28Krt1S-kydCQGb_xNxMcXIh7m-_LrH6657L03bHQOdDoi6ivo6lrRh7S8gZp_GbkZR0tpdsY5Hm6pr18Gdexc",
+								"description": "auth token.user must be login."
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{dc_costumer}}cart/clear",
+							"host": [
+								"{{dc_costumer}}cart"
+							],
+							"path": [
+								"clear"
+							]
+						},
+						"description": "clear user cart"
+					},
+					"response": []
+				},
+				{
+					"name": "get restaurant order types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dc_costumer}}restaurant/order/types?venue_id=1",
+							"host": [
+								"{{dc_costumer}}restaurant"
+							],
+							"path": [
+								"order",
+								"types"
+							],
+							"query": [
+								{
+									"key": "venue_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Order feedback",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImUzMTMxZWZhNTlhNDkyY2YzMDZmYjdiY2VjMTc0ZjU1NjQ0ODEwMGQ1YzdhNTM4MDQ3Y2I4NmUxNTdkYWY3OWMzZDZlYWQxMGYxODc3MDI5In0.eyJhdWQiOiIzIiwianRpIjoiZTMxMzFlZmE1OWE0OTJjZjMwNmZiN2JjZWMxNzRmNTU2NDQ4MTAwZDVjN2E1MzgwNDdjYjg2ZTE1N2RhZjc5YzNkNmVhZDEwZjE4NzcwMjkiLCJpYXQiOjE1ODc0OTMyNjUsIm5iZiI6MTU4NzQ5MzI2NSwiZXhwIjoxNjE5MDI5MjY1LCJzdWIiOiI3MSIsInNjb3BlcyI6W119.EiuKv5paxj1rzQK-kLS3y2lsUrFtm2wr9M_NqA3h6jRxURbRokOzWcGotasswVYlVVnozyifBoux7SAe0vi2Bw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order_id",
+									"value": "22",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "venue_id",
+									"value": "33",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "quality_food",
+									"value": "",
+									"description": "optional.1 to 5 value.",
+									"type": "text"
+								},
+								{
+									"key": "service_efficiency",
+									"value": "",
+									"description": "optional.1 to 5 value.",
+									"type": "text"
+								},
+								{
+									"key": "value_money",
+									"value": "4",
+									"description": "optional.1 to 5 value.",
+									"type": "text"
+								},
+								{
+									"key": "feedback",
+									"value": "this is texting",
+									"description": "optional.text.max 255 char.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}user/order/feedback",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"order",
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check restaurant address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "venue_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "address_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "total_amount",
+									"value": "1200",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "31.3202919",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "74.3851379",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}check/restaurant/deliveryaddress",
+							"host": [
+								"{{dc_costumer}}check"
+							],
+							"path": [
+								"restaurant",
+								"deliveryaddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stripe checkout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxNSIsImp0aSI6IjUzNmRkZWQyOWQ5YmI4MmI5NjRlNDcxZmRmOTJhNWE0OWQzYzY5Yzc3OWI3NDlkMTQxOWRhNDMwYzM3ZGNkYjEyY2MyYWYxZGU5ZGU5MzNlIiwiaWF0IjoxNzEwMjQzMjUyLjE1NzAyLCJuYmYiOjE3MTAyNDMyNTIuMTU3MDIyLCJleHAiOjE3NDE3NzkyNTIuMTUyNzMyLCJzdWIiOiIxNjkyNiIsInNjb3BlcyI6W119.tC-M9pAfuQahePuV-LKnohUhc5upwsX9xen02ZWC7BW0xsEreTa5lemh5Xrw2UXvGGZrh-zG7iSy8O0HLl0vNEM8Fpi3-fAPoZ3c1KtbV8pcphs11edSsVegApDjpvKGWEtOZGy6SKcIXU1C8MxX9A8DqNETPW97zE82nQJEewaGi6drGSsQB2L0yyJtTXCoMzLuQgKNBhXR7iGfkwew64l8YxhYXyKF5DSIyngmZrUIF-PHJtJvUSG0aqhIQhAoXkd61W3-bxGQNz_8smVSAP1mSQjdb6yyu0R4XBwbgh-NGk_fEHklBB91KrxZYBRi_Oq6BZc7LEMf3_Z2quhqhFjJQFYB-6unrGZOqQ92s2ekLAv_G5mtk73uelZcGgGM-Q5ytcB3XP2Rv2P_aUiQh9SfwAB0pItHLCdMltPi_QOuOsm7sd-JjIK92yZYwYvBBPzxb92I_CBPAWc5J5cSdS_wUkY-wREYqHMaOCUXuG0743NZHiZvnenGLnZjVdqsU_2WU7W7h55N7jKbOT0Rhf3XZeMMWe9Yw7hWqQ_Tjz9wTtgxxvImTcDVQL8cmYeAjVLhvGM4BN9i5UwWQryomijV5e2TAtxk63ZEdKEyALcQImpPYDyDiAleq6clLd1UQB9Ldo8rMRn4RcGAhTQK2FOira-jB-ZK1SimCGB18k8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE0NGJmNjM4YzM5YjRlYTMzZGVhYzBlYmY4OWViN2IzOGMyM2MyYmFiNTU1OWVhYjhmMzA5ZTZhMWVhODA0OTZhYjUzMDkxMjRmYzY1NzEyIn0.eyJhdWQiOiI3IiwianRpIjoiYTQ0YmY2MzhjMzliNGVhMzNkZWFjMGViZjg5ZWI3YjM4YzIzYzJiYWI1NTU5ZWFiOGYzMDllNmExZWE4MDQ5NmFiNTMwOTEyNGZjNjU3MTIiLCJpYXQiOjE2MzQwMjQzMTEsIm5iZiI6MTYzNDAyNDMxMSwiZXhwIjoxNjY1NTYwMzExLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.AJs1V6_Se-vVqnSFciJWXJoVnfxz9pn7I7ta5d-OxsmJE_1ZYuY19CD2z4Ob8jPQxrvvKrFOz29zcrpUm5f-GDqK6S-c9KsD2Rl4rQybEuPHu6q7qaqkotdtacRAzCJrcVloam_gbtL4NwNZL0n2ISZMXPsVQjEeVUNJT34ofwOdU1iPtrtjyhTf1OmxYqy4DfV_6Cph6cYc1UOwbdqYOi36qawKNFlTQAuI4Df0lBZ9yH_1ZgWkuAqXRiRz0y4fY9TZgfrHRKySBnJYF17s-WcdNc6QqV8mL5VnfuEVEOimzHgTixqxNAxMjv5Uqopdr7Nt2Z2cl12zrv855FPAbOKVm9hEZOB-pe92UFLyV-abX7JMYntwv-Zkhk_EUoxx1Xz8v35pGlT0V3ZPGd4Tfessj9GZzZJUdjIeSgcffsWG6Z-xH4X7tcRDpimBIzyQ_ifKzrHHTcwNGNOX5yC0vTRf3iBVevZoKx1gmVN5AJsoGAcYxjsI58RUnbrFmhMdOGWuzoppw2j48-SbS7ZwT1MdeIxr6AfuhpYVzZlKftB4i71AcyXC1SCmBza7HB2yMvXWs1ff-5Nll8UgEunL4j2JWxE3WMKm5zVydIRZf-FI55DW_OU08bJYqrJloOM8TTejmgTX1hQEW9sp9bY6iu0zfM6P76vazNNsDMp8ocw"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "is_voucher_discount",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "voucher_discount_code",
+									"value": "ACCD1",
+									"type": "text"
+								},
+								{
+									"key": "customer_address",
+									"value": "3023",
+									"type": "text"
+								},
+								{
+									"key": "shipping_type_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}stripe/checkout",
+							"host": [
+								"{{dc_costumer}}stripe"
+							],
+							"path": [
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stripe transaction fee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNhYWUxMjZjYzY1OGYyMjBiMTA5ZTkyNjZiNzk0NjBiNDA1N2Y2YzExOTMwYjYwYTlmODc2NmFmNzdhZjI2OTczNTNmYjBhMDg2ZjQyYTc1In0.eyJhdWQiOiI3IiwianRpIjoiM2FhZTEyNmNjNjU4ZjIyMGIxMDllOTI2NmI3OTQ2MGI0MDU3ZjZjMTE5MzBiNjBhOWY4NzY2YWY3N2FmMjY5NzM1M2ZiMGEwODZmNDJhNzUiLCJpYXQiOjE2MzM0MTEyNjMsIm5iZiI6MTYzMzQxMTI2MywiZXhwIjoxNjY0OTQ3MjYzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.DaGoDYikvKhE3RJq-WjJu51AJ2Qme5WWWxzNT4bQOWHIPRjAHTJKyapUHqrQN3nTFy4hnyyRgwViSkiYLX769h0iz8ScmDRZvUSakEnzBMn1i80uuAQuWQeZ_Hv3ydx6RaCpdWeNL0lSLteUnyXOigMMovq9EHswNfO15jQ5pTR01L0h1UglDU92GqJ1MCMr1lQAcKya3I7rFgAGCWphoOVnN5_yipq5LIhW964pA3ONmKcWflVZAJJKI_Ffb0dxkZhTM-Txs33Dd_DSCpxNi2vjBDWTn222zDLbR0s4ZTd7mxhAEe5lGF1k_IrTCiq5sKG4q6IP12IaqOXwdGTYVli7Qa4GSFoA_-3FCwLgEg4AjmzZY1OEOSG9UCxRKijZzgsHpjdWx5dBE4NYizr_pHXNrfMTldqVnW9P6IJYRGohD9zyvMfYETPKGuIchKf6avIwO2KyZxLzt6Q_KnMqtjMKOOr_eisA7j-l2Oxif2UWbC8YcT63DLItx_IpVQfcSixGXlOnpcpvibRy25GRNnZeeaRpcI4pZ_XDH6NAwf1hmCro6BaCa0XRQ9QcZhuXVYsCKwkQsFkiqKm9gzAfPPnpmA2YYCc3C5x_oYagmk1CM-jWUPVwkanYT12zuXIjlLEnB9dWMEFLnvnLiATiKV-qw6HAPJ-9nivEkrg06ZE"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "is_voucher_discount",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "voucher_discount_code",
+									"value": "ABCD",
+									"type": "text"
+								},
+								{
+									"key": "customer_address",
+									"value": "3023",
+									"type": "text"
+								},
+								{
+									"key": "shipping_type_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}stripe/transaction/fee",
+							"host": [
+								"{{dc_costumer}}stripe"
+							],
+							"path": [
+								"transaction",
+								"fee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order place new api not in used",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 401\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(401);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required Content-Type header with value application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Message in the response is not empty\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.message).to.exist.and.to.not.be.empty;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response includes necessary fields for error handling\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.message).to.exist.and.to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response time is within an acceptable range\", function () {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk0ZGNlNTViYjg2YTA0MjM3Yjc2NGRiODVhNDQyOTA4ZWI5MGVhNDZkZjNiNmMwYjRlMmQxNWRkYWY4ODhkMzUyMzIyNGEyOTQ5YzkwY2E2In0.eyJhdWQiOiIzIiwianRpIjoiOTRkY2U1NWJiODZhMDQyMzdiNzY0ZGI4NWE0NDI5MDhlYjkwZWE0NmRmM2I2YzBiNGUyZDE1ZGRhZjg4OGQzNTIzMjI0YTI5NDljOTBjYTYiLCJpYXQiOjE1ODg3NDY0MDcsIm5iZiI6MTU4ODc0NjQwNywiZXhwIjoxNjIwMjgyNDA3LCJzdWIiOiI3MSIsInNjb3BlcyI6W119.AQrqW_nG7LJMVyj3qufRKcryZns3nQgcXlXAKwplXp1sh2MasQNk_4PrNzR04a6HAfXSy7y_m11hNXVwVANoTg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shipping_type_id",
+									"value": "1",
+									"description": "order type id.means delivery,pickup,dinning",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "card",
+									"description": "there are two methods card and cash.",
+									"type": "text"
+								},
+								{
+									"key": "customer_address",
+									"value": "4",
+									"description": "required_if shipping_type_id ==1,which means delivery. user address id.you can get this from user address api.",
+									"type": "text"
+								},
+								{
+									"key": "customer_order_message",
+									"value": "hi this is from app order first",
+									"description": "any text message.optional",
+									"type": "text"
+								},
+								{
+									"key": "order_placed_platform",
+									"value": "app",
+									"description": "it should be 'app'.it is a flag",
+									"type": "text"
+								},
+								{
+									"key": "venue_slug",
+									"value": "kings-queens-pizza-gulberg-barrow-in-furness",
+									"description": "any text.",
+									"type": "text"
+								},
+								{
+									"key": "payment_token",
+									"value": "pm_1Gek78GJCJTQahgcjlbIPtdh",
+									"description": "it is required if you select payment method card.stripe token.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}user/order-place",
+							"host": [
+								"{{dc_costumer}}user"
+							],
+							"path": [
+								"order-place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify voucher discount code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg1NGVkYmU3OTI0NjBkZjM5NWMyZTkwNjdhYjI1ZjMwNDBhMTUwNzIxZTk2ZGZlYjU1ZmIyODRiYjI2ZjQ0MWQwOWZiNmRkOWYzZDJiNzc4In0.eyJhdWQiOiI3IiwianRpIjoiODU0ZWRiZTc5MjQ2MGRmMzk1YzJlOTA2N2FiMjVmMzA0MGExNTA3MjFlOTZkZmViNTVmYjI4NGJiMjZmNDQxZDA5ZmI2ZGQ5ZjNkMmI3NzgiLCJpYXQiOjE2MjI3OTg0NzYsIm5iZiI6MTYyMjc5ODQ3NiwiZXhwIjoxNjU0MzM0NDc2LCJzdWIiOiI0MDMiLCJzY29wZXMiOltdfQ.ThbYa1bKad1q9hTtx7athb9Z6JD9IOW0rDSCvAESFe7UhOtFn0wdd3Mo3cD1GuV7z7T1RW8lo2JtYORmLJ1unE8ndrnQojUKqHw0JSMqht-IJWDdOAUIn-f1-u-ry9FK3auJ8RBEmlSmFLscar39vOqyn4I97jUFNV3072Rbh9vr-2D0qXqy2Suz-udEqDZqMoNa8uH6VF4h0HSr3EKX5MX8cWeAl3lQqgm0-bpMVr-rO0aA8mZLHwLeGTlKJrvAlHre5nrSQe5FGv4w2oXI5065t725QupCl1uGQpl4CUe5V3T_pXwjfiS2ugNYDm9KAXA_tvvmjsc45qXtVJu5qLr0FpCgkFACO2K7etf10TRK3e93NzWuySAu1eBSEOy7qjQyz7YzLAZHMQAYlrSA15-W1kPgArGFU58UHTX2169-PvuI59EVpG8t3B-QR6IG6oxwCoFyBjCzv9fFBV_S6etDNr9TdWMNEyvT4GK-ZANpqJxXVZ0GxFgldslir2r-NPe4GTm0w5j8gfcXE1kyucYEaTjHn-zH2gFKdDJHKg1-Gu-CBd-2ocZ_QfLXOokXV9tTAWu2eUjHtYBPd0eR4JjvCCMMWmCW1nUj0g_5NZFHERVKgwKEiH2nwiTX0Hj7ALgaXZbvlplIs5uwlIhsECGKBIavzhRVVq7tYXoSkr8"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "venue_slug",
+									"value": "ChohanFishCorner",
+									"type": "text"
+								},
+								{
+									"key": "voucher_code",
+									"value": "4saad3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}cart/verify/voucher/code",
+							"host": [
+								"{{dc_costumer}}cart"
+							],
+							"path": [
+								"verify",
+								"voucher",
+								"code"
+							]
+						},
+						"description": "verify voucher discount code"
+					},
+					"response": []
+				},
+				{
+					"name": "Home Screen",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Popular venues data is present and contains expected number of elements\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.have.property('popular_venues');\r",
+									"    pm.expect(responseData.popular_venues.data).to.be.an('array').with.lengthOf(1);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Venues list data should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData).to.have.property('venues_list').that.is.not.empty;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Hot deals data contains required fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData.hot_deals).to.be.an('object');\r",
+									"    pm.expect(responseData.hot_deals.data).to.be.an('array');\r",
+									"\r",
+									"    responseData.hot_deals.data.forEach(function(deal) {\r",
+									"        pm.expect(deal).to.have.property('deal_id');\r",
+									"        pm.expect(deal).to.have.property('deal_name');\r",
+									"        pm.expect(deal).to.have.property('total_price');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{dc_costumer}}home/screen?latitude=31.5203696&longitude=74.35874729999999",
+							"host": [
+								"{{dc_costumer}}home"
+							],
+							"path": [
+								"screen"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "31.5203696"
+								},
+								{
+									"key": "longitude",
+									"value": "74.35874729999999"
+								}
+							]
+						},
+						"description": "Home Screen"
+					},
+					"response": []
+				},
+				{
+					"name": "Search Autocomplate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"ResponseHeader and data objects have the correct structure\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.ResponseHeader).to.be.an('object');\r",
+									"    pm.expect(responseData.data).to.be.an('object');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Has_discount and is_zone_closed are boolean values\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.data.data).to.be.an('array');\r",
+									"  \r",
+									"  responseData.data.data.forEach(function(restaurant) {\r",
+									"    pm.expect(restaurant.has_discount).to.be.a('boolean');\r",
+									"    pm.expect(restaurant.is_zone_closed).to.be.a('boolean');\r",
+									"  });\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dc_costumer}}restaurant/search/autocomplete?page=1&limit=2&keyword=Chohan Fish&address=Jinnah Park,+Sheikhupura,+Pakistan",
+							"host": [
+								"{{dc_costumer}}restaurant"
+							],
+							"path": [
+								"search",
+								"autocomplete"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "keyword",
+									"value": "Chohan Fish"
+								},
+								{
+									"key": "address",
+									"value": "Jinnah Park,+Sheikhupura,+Pakistan"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Social Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "provider",
+									"value": "facebook",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "EAAWgkrqHgt4BAGHsb3VlLq1B3JEn8ZCZCVc6xhQdo9FAbiqrFdveNZC7WtYc7G9RwENNWaZAtnE9gZAW3GfK6jPIeNwBXZCrPaM18ohlRe4LUvJ8deUIpBgKRltcjKMCbIQO3Du1ZC801svvhElksK6ZBR29p8bbpkpeXYSelK7WEOmBSXhO5wkkL7w4Jy5wAJkVPHTYcgvvHH8PJQhZB0SxOjfSIBTPeOIGBzf6fhUC8lQZDZD",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dc_costumer}}social/login",
+							"host": [
+								"{{dc_costumer}}social"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Social Login enabled/disabled",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{dc_costumer}}social/login/allowed",
+							"host": [
+								"{{dc_costumer}}social"
+							],
+							"path": [
+								"login",
+								"allowed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
